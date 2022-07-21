@@ -1,6 +1,7 @@
 using RouletteGameApi.Context;
 using RouletteGameApi.Contracts;
 using RouletteGameApi.Database;
+using RouletteGameApi.Extensions;
 using RouletteGameApi.Repository;
 
 namespace RouletteGameApi
@@ -36,6 +37,10 @@ namespace RouletteGameApi
 
             app.UseAuthorization();
             app.MapControllers();
+
+            var logger = app.Services.GetRequiredService<ILogger<Program>>();
+            app.ConfiqureExceptionHandler(logger);
+
             app.Services.GetService<IDatabaseBootstrap>().Setup();
             app.Run();
         }

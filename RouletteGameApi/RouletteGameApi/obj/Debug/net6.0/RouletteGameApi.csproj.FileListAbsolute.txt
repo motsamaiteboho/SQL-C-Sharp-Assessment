@@ -108,3 +108,4 @@ C:\Users\Motsa\Desktop\Dervico\SQL $ SHARP Assessment\RouletteGameApi\RouletteGa
 C:\Users\Motsa\Desktop\Dervico\SQL $ SHARP Assessment\RouletteGameApi\RouletteGameApi\obj\Debug\net6.0\ref\RouletteGameApi.dll
 C:\Users\Motsa\Desktop\Dervico\SQL $ SHARP Assessment\RouletteGameApi\RouletteGameApi\obj\Debug\net6.0\RouletteGameApi.pdb
 C:\Users\Motsa\Desktop\Dervico\SQL $ SHARP Assessment\RouletteGameApi\RouletteGameApi\obj\Debug\net6.0\RouletteGameApi.genruntimeconfig.cache
+C:\Users\Motsa\Desktop\Dervico\SQL $ SHARP Assessment\RouletteGameApi\RouletteGameApi\bin\Debug\net6.0\Newtonsoft.Json.dll

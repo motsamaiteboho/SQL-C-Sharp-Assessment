@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Motsa\\Desktop\\Dervico\\Api\\RouletteGameApi\\RouletteGameApi\\RouletteGameApi.csproj": {}
+    "C:\\Users\\Motsa\\Desktop\\Dervico\\SQL $ SHARP Assessment\\RouletteGameApi\\RouletteGameApi\\RouletteGameApi.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Motsa\\Desktop\\Dervico\\Api\\RouletteGameApi\\RouletteGameApi\\RouletteGameApi.csproj": {
+    "C:\\Users\\Motsa\\Desktop\\Dervico\\SQL $ SHARP Assessment\\RouletteGameApi\\RouletteGameApi\\RouletteGameApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Motsa\\Desktop\\Dervico\\Api\\RouletteGameApi\\RouletteGameApi\\RouletteGameApi.csproj",
+        "projectUniqueName": "C:\\Users\\Motsa\\Desktop\\Dervico\\SQL $ SHARP Assessment\\RouletteGameApi\\RouletteGameApi\\RouletteGameApi.csproj",
         "projectName": "RouletteGameApi",
-        "projectPath": "C:\\Users\\Motsa\\Desktop\\Dervico\\Api\\RouletteGameApi\\RouletteGameApi\\RouletteGameApi.csproj",
+        "projectPath": "C:\\Users\\Motsa\\Desktop\\Dervico\\SQL $ SHARP Assessment\\RouletteGameApi\\RouletteGameApi\\RouletteGameApi.csproj",
         "packagesPath": "C:\\Users\\Motsa\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Motsa\\Desktop\\Dervico\\Api\\RouletteGameApi\\RouletteGameApi\\obj\\",
+        "outputPath": "C:\\Users\\Motsa\\Desktop\\Dervico\\SQL $ SHARP Assessment\\RouletteGameApi\\RouletteGameApi\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Motsa\\AppData\\Roaming\\NuGet\\NuGet.Config",

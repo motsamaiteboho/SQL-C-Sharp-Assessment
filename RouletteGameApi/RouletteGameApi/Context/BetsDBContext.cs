@@ -16,5 +16,6 @@ namespace RouletteGameApi.Context
 		}
 		public IDbConnection CreateConnection()
 			=> new SqliteConnection(_connectionString);
+
 	}
 }

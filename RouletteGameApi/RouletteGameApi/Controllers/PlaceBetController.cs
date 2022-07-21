@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using RouletteGameApi.Contracts;
+using RouletteGameApi.Database;
 using RouletteGameApi.Dto;
 using RouletteGameApi.Entities;
 
@@ -18,6 +19,7 @@ namespace RouletteGameApi.Controllers
             _placeBetRepo = placeBetRepo;
             _logger = logger;
         }
+
         [HttpGet]
         public async Task<IActionResult> GetPlacedBets()
         {
@@ -32,7 +34,7 @@ namespace RouletteGameApi.Controllers
         public async Task<IActionResult> GetPlacedBet(int id)
         {
              _logger.LogInformation("Fetching a placedbet from the storage");
-               var placedbet  = await  _placeBetRepo.GetPlacedBet(id);
+             var placedbet  = await  _placeBetRepo.GetPlacedBet(id);
             if (placedbet is null)
             {
                 return NotFound();

@@ -20,7 +20,7 @@ namespace RouletteGameApi.Repository
         public async Task<PlaceBet> PlaceBet(PlaceBetDto bet)
         {
             var query = "INSERT INTO PlacedBets  (TypeOfBet, NumbersOnTheTable, BetAmount)" +
-                "VALUES (@TypeOfBet, @NumbersOnTheTable,@BetAmount);"+
+                "VALUES (@TypeOfBet, @NumbersOnTheTable,@BetAmount);" +
                 "SELECT last_insert_rowid();";
 
             var parameters = new DynamicParameters();
@@ -30,12 +30,12 @@ namespace RouletteGameApi.Repository
 
             using (var connection = _context.CreateConnection())
             {
-               var id =  await connection.QuerySingleOrDefaultAsync<int>(query,parameters);
+                var id = await connection.QuerySingleOrDefaultAsync<int>(query, parameters);
 
                 var placedBet = new PlaceBet
                 {
                     Id = id,
-                    TypeOfBet = bet.TypeOfBet,
+                    TypeOfBet =(TypeOfBet)Enum.Parse( typeof(TypeOfBet), bet.TypeOfBet ),
                     NumbersOnTheTable = bet.NumbersOnTheTable,
                     BetAmount = bet.BetAmount,
                 };
@@ -64,7 +64,7 @@ namespace RouletteGameApi.Repository
             }
         }
 
-        public  async Task UpdateBet(int id, UpdateBetDto bet)
+        public async Task UpdateBet(int id, UpdateBetDto bet)
         {
             var query = "UPDATE PlacedBets SET TypeOfBet = @TypeOfBet ," +
                "NumbersOnTheTable = @NumbersOnTheTable," +
@@ -77,17 +77,18 @@ namespace RouletteGameApi.Repository
             parameters.Add("@BetAmount", bet.BetAmount, DbType.Decimal);
             using (var connection = _context.CreateConnection())
             {
-                await connection.ExecuteAsync(query, parameters);   
+                await connection.ExecuteAsync(query, parameters);
             }
         }
-        public async Task DeleteBet(int Id)  
+        public async Task DeleteBet(int Id)
         {
             var query = "DELETE FROM PlacedBets WHERE Id = @Id";
 
             using (var connection = _context.CreateConnection())
             {
-                await connection.ExecuteAsync(query, new {Id});
+                await connection.ExecuteAsync(query, new { Id });
             }
         }
+
     }
 }

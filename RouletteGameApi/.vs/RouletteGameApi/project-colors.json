@@ -5,6 +5,11 @@
       "ProjectGuid": "7eb8ae94-ecd0-4aa9-ae82-7eb6c39a862d",
       "DisplayName": "RouletteGameApi",
       "ColorIndex": 0
+    },
+    "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3": {
+      "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
+      "DisplayName": "Miscellaneous Files",
+      "ColorIndex": -1
     }
   },
   "NextColorIndex": 1

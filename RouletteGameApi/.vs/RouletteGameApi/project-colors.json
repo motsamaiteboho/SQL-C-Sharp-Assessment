@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "7eb8ae94-ecd0-4aa9-ae82-7eb6c39a862d": {
+      "ProjectGuid": "7eb8ae94-ecd0-4aa9-ae82-7eb6c39a862d",
+      "DisplayName": "RouletteGameApi",
+      "ColorIndex": 0
+    }
+  },
+  "NextColorIndex": 1
+}

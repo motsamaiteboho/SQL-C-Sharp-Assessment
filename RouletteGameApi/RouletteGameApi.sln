@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.32112.339
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RouletteGameApi", "RouletteGameApi\RouletteGameApi.csproj", "{7EB8AE94-ECD0-4AA9-AE82-7EB6C39A862D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RouletteGameApi", "RouletteGameApi\RouletteGameApi.csproj", "{7EB8AE94-ECD0-4AA9-AE82-7EB6C39A862D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RouletteGameApi.UnitTests", "RouletteGameApi.UnitTests\RouletteGameApi.UnitTests.csproj", "{EC0C8CB1-C950-4CF0-BB6F-00EE6508809C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{7EB8AE94-ECD0-4AA9-AE82-7EB6C39A862D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7EB8AE94-ECD0-4AA9-AE82-7EB6C39A862D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7EB8AE94-ECD0-4AA9-AE82-7EB6C39A862D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EC0C8CB1-C950-4CF0-BB6F-00EE6508809C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EC0C8CB1-C950-4CF0-BB6F-00EE6508809C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EC0C8CB1-C950-4CF0-BB6F-00EE6508809C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EC0C8CB1-C950-4CF0-BB6F-00EE6508809C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

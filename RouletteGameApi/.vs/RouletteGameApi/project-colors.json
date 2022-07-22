@@ -10,7 +10,12 @@
       "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
       "DisplayName": "Miscellaneous Files",
       "ColorIndex": -1
+    },
+    "ec0c8cb1-c950-4cf0-bb6f-00ee6508809c": {
+      "ProjectGuid": "ec0c8cb1-c950-4cf0-bb6f-00ee6508809c",
+      "DisplayName": "RouletteGameApi.UnitTests",
+      "ColorIndex": 1
     }
   },
-  "NextColorIndex": 1
+  "NextColorIndex": 2
 }

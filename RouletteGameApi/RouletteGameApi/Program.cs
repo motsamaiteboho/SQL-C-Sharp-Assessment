@@ -12,8 +12,8 @@ namespace RouletteGameApi
         {
 
             var builder = WebApplication.CreateBuilder(args);
-             // Add services to the container.
-
+            // Add services to the container.
+             builder.Services.AddScoped<IRepositoryWrapper, RepositoryWrapper>();
              builder.Services.AddControllers();
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
@@ -22,7 +22,9 @@ namespace RouletteGameApi
             //builder.Services.AddSingleton(new DatabaseConfig { Name ="DatabaseName" });
             builder.Services.AddSingleton<BetsDBContext>();
             builder.Services.AddSingleton<IDatabaseBootstrap, DatabaseBootstrap>();
-            builder.Services.AddSingleton<IPlaceBetRepository, PlaceBetRepository>();
+           // builder.Services.AddSingleton<IPlaceBetRepository, PlaceBetRepository>();
+            //builder.Services.AddSingleton<ISpinRepository, SpinRepository>();
+            //builder.Services.AddSingleton<IPayoutRepository,PayoutRepository>();
 
             var app = builder.Build();
 

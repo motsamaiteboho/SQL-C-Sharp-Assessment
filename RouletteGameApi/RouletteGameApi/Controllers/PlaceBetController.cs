@@ -12,11 +12,11 @@ namespace RouletteGameApi.Controllers
     [ApiController]
     public class PlaceBetController : ControllerBase
     {
-        private readonly IPlaceBetRepository _placeBetRepo;
+        private readonly IRepositoryWrapper _repository;
         private ILogger<PlaceBetController> _logger; 
-        public PlaceBetController(IPlaceBetRepository placeBetRepo, ILogger<PlaceBetController> logger)
+        public PlaceBetController(IRepositoryWrapper repository, ILogger<PlaceBetController> logger)
         {
-            _placeBetRepo = placeBetRepo;
+            _repository = repository;
             _logger = logger;
         }
 
@@ -24,17 +24,20 @@ namespace RouletteGameApi.Controllers
         public async Task<IActionResult> GetPlacedBets()
         {
             _logger.LogInformation("Fetching all the placedbets from the storage");
-            var placedbets = await _placeBetRepo.GetPlacedBets();
+            var placedbets = await _repository.PlaceBet.GetPlacedBets();
 
             _logger.LogInformation($"Returning  {placedbets.Count()}  placed bets");
-            return  Ok(placedbets);
+            if(placedbets.Any())
+                return  Ok(placedbets);
+
+            return NotFound(); 
         }
 
         [HttpGet("{id}")]
         public async Task<IActionResult> GetPlacedBet(int id)
         {
              _logger.LogInformation("Fetching a placedbet from the storage");
-             var placedbet  = await  _placeBetRepo.GetPlacedBet(id);
+             var placedbet  = await _repository.PlaceBet.GetPlacedBet(id);
             if (placedbet is null)
             {
                 return NotFound();
@@ -46,7 +49,7 @@ namespace RouletteGameApi.Controllers
         public async Task<IActionResult> PlaceBet([FromBody] PlaceBetDto bet)
         {
             _logger.LogInformation("Placing a bet");
-            var placedBet =  await _placeBetRepo.PlaceBet(bet);
+            var placedBet =  await _repository.PlaceBet.PlaceBet(bet);
 
             _logger.LogInformation(" A bet was successfully placed");
             return CreatedAtAction(nameof(PlaceBet), new { id = placedBet.Id }, placedBet);
@@ -56,13 +59,13 @@ namespace RouletteGameApi.Controllers
         public async Task<IActionResult> UpdateBet( int id, [FromBody] UpdateBetDto bet)
         {
             _logger.LogInformation("updating a placed bet");
-            var dbPlacedBet = await _placeBetRepo.GetPlacedBet(id);
+            var dbPlacedBet = await _repository.PlaceBet.GetPlacedBet(id);
 
             if (dbPlacedBet is null)
             {
                 return NotFound();
             }
-            await _placeBetRepo.UpdateBet(id, bet);
+            await _repository.PlaceBet.UpdateBet(id, bet);
             _logger.LogInformation("a bet was uptdated sucessfully");
            
             return NoContent(); 
@@ -71,12 +74,12 @@ namespace RouletteGameApi.Controllers
         public async Task<IActionResult> DeleteBet(int id)
         {
             _logger.LogInformation("Deleting a placed bet");
-            var dbPlacedBet = await _placeBetRepo.GetPlacedBet(id);
+            var dbPlacedBet = await _repository.PlaceBet.GetPlacedBet(id);
             if(dbPlacedBet is null)
             {
                 return NotFound();
             }
-            await _placeBetRepo.DeleteBet(id);
+            await _repository.PlaceBet.DeleteBet(id);
             _logger.LogInformation("bet was successfully deleted");
             return NoContent();
         }

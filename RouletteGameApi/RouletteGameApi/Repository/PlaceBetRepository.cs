@@ -35,7 +35,7 @@ namespace RouletteGameApi.Repository
                 var placedBet = new PlaceBet
                 {
                     Id = id,
-                    TypeOfBet =(TypeOfBet)Enum.Parse( typeof(TypeOfBet), bet.TypeOfBet ),
+                    TypeOfBet =bet.TypeOfBet,
                     NumbersOnTheTable = bet.NumbersOnTheTable,
                     BetAmount = bet.BetAmount,
                 };
@@ -59,8 +59,8 @@ namespace RouletteGameApi.Repository
 
             using (var connection = _context.CreateConnection())
             {
-                var placedbet = await connection.QuerySingleOrDefaultAsync<PlaceBet>(query, new { Id });
-                return placedbet;
+                var placebet = await connection.QuerySingleOrDefaultAsync<PlaceBet>(query, new { Id });
+                 return placebet;
             }
         }
 

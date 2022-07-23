@@ -19,12 +19,8 @@ namespace RouletteGameApi
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
 
-            //builder.Services.AddSingleton(new DatabaseConfig { Name ="DatabaseName" });
             builder.Services.AddSingleton<BetsDBContext>();
             builder.Services.AddSingleton<IDatabaseBootstrap, DatabaseBootstrap>();
-           // builder.Services.AddSingleton<IPlaceBetRepository, PlaceBetRepository>();
-            //builder.Services.AddSingleton<ISpinRepository, SpinRepository>();
-            //builder.Services.AddSingleton<IPayoutRepository,PayoutRepository>();
 
             var app = builder.Build();
 
@@ -34,7 +30,6 @@ namespace RouletteGameApi
                 app.UseSwagger();
                 app.UseSwaggerUI();
             }
-
             app.UseHttpsRedirection();
 
             app.UseAuthorization();

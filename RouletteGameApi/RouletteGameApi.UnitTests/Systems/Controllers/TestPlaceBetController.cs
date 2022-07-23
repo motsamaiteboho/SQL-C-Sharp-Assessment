@@ -79,18 +79,5 @@ namespace RouletteGameApi.UnitTests.Systems.Controllers
             result.Should().BeOfType<NotFoundResult>();
          
         }
-        //[Fact]
-        //public async void GetPayout_OnSucces_ReturnsSaatusCode200()
-        //{
-        //    //Arrange
-        //    var sut = new PlaceBetController();
-
-        //    //Act
-        //    var result = (OkObjectResult)await sut.Get();
-
-        //    //Assert
-        //    result.StatusCode.Should().Be(200);
-
-        //}
     } 
 }

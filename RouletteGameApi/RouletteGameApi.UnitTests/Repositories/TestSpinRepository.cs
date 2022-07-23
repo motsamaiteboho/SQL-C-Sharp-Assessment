@@ -1,16 +1,8 @@
 ﻿using FluentAssertions;
-using Moq;
-using Moq.Protected;
-using RouletteGameApi.Contracts;
 using RouletteGameApi.Entities;
 using RouletteGameApi.Repository;
 using RouletteGameApi.UnitTests.Fixtures;
 using RouletteGameApi.UnitTests.Helpers;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Xunit;
 
 namespace RouletteGameApi.UnitTests.Repositories

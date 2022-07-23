@@ -7,7 +7,7 @@ namespace RouletteGameApi.Dto
     {
         [Required]
         [StringLength(50)]
-        public string? TypeOfBet { get; set; }
+        public string? BetName { get; set; }
 
         [Required]
         public int NumbersOnTheTable { get; set; }

@@ -6,6 +6,7 @@ using RouletteGameApi.Contracts;
 using RouletteGameApi.Controllers;
 using RouletteGameApi.Entities;
 using RouletteGameApi.UnitTests.Fixtures;
+using Xunit;
 
 namespace RouletteGameApi.UnitTests.Systems.Controllers
 {

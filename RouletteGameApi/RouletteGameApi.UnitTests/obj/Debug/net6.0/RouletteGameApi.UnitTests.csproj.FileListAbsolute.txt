@@ -141,3 +141,4 @@ C:\Users\Motsa\Desktop\Dervico\SQL $ SHARP Assessment\RouletteGameApi\RouletteGa
 C:\Users\Motsa\Desktop\Dervico\SQL $ SHARP Assessment\RouletteGameApi\RouletteGameApi.UnitTests\obj\Debug\net6.0\ref\RouletteGameApi.UnitTests.dll
 C:\Users\Motsa\Desktop\Dervico\SQL $ SHARP Assessment\RouletteGameApi\RouletteGameApi.UnitTests\obj\Debug\net6.0\RouletteGameApi.UnitTests.pdb
 C:\Users\Motsa\Desktop\Dervico\SQL $ SHARP Assessment\RouletteGameApi\RouletteGameApi.UnitTests\obj\Debug\net6.0\RouletteGameApi.UnitTests.genruntimeconfig.cache
+C:\Users\Motsa\Desktop\Dervico\SQL $ SHARP Assessment\RouletteGameApi\RouletteGameApi.UnitTests\bin\Debug\net6.0\FakeItEasy.dll

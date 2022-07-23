@@ -15,7 +15,7 @@ namespace RouletteGameApi.UnitTests.Fixtures
                new PlaceBet
                {
                    Id = 1,
-                   TypeOfBet = "split",
+                   BetName = "split",
                    NumbersOnTheTable = 5,
                    BetAmount = 20
                    
@@ -23,7 +23,7 @@ namespace RouletteGameApi.UnitTests.Fixtures
                new PlaceBet
                {
                    Id = 2,
-                   TypeOfBet = "strightup",
+                   BetName = "strightup",
                    NumbersOnTheTable = 5,
                    BetAmount = 20
 
@@ -31,7 +31,7 @@ namespace RouletteGameApi.UnitTests.Fixtures
                new PlaceBet
                {
                    Id = 3,
-                   TypeOfBet = "even",
+                   BetName = "even",
                    NumbersOnTheTable = 4,
                    BetAmount = 76.84m
 
@@ -39,7 +39,7 @@ namespace RouletteGameApi.UnitTests.Fixtures
                new PlaceBet
                {
                    Id = 3,
-                   TypeOfBet = "odd",
+                   BetName = "odd",
                    NumbersOnTheTable = 13,
                    BetAmount = 50.54m
 

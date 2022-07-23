@@ -19,12 +19,12 @@ namespace RouletteGameApi.Repository
 
         public async Task<PlaceBet> PlaceBet(PlaceBetDto bet)
         {
-            var query = "INSERT INTO PlacedBets  (TypeOfBet, NumbersOnTheTable, BetAmount)" +
-                "VALUES (@TypeOfBet, @NumbersOnTheTable,@BetAmount);" +
+            var query = "INSERT INTO PlacedBets  (BetName, NumbersOnTheTable, BetAmount)" +
+                "VALUES (@BetName, @NumbersOnTheTable,@BetAmount);" +
                 "SELECT last_insert_rowid();";
 
             var parameters = new DynamicParameters();
-            parameters.Add("@TypeOfBet", bet.TypeOfBet, DbType.String);
+            parameters.Add("@BetName", bet.BetName, DbType.String);
             parameters.Add("@NumbersOnTheTable", bet.NumbersOnTheTable, DbType.Int64);
             parameters.Add("@BetAmount", bet.BetAmount, DbType.Decimal);
 
@@ -35,7 +35,7 @@ namespace RouletteGameApi.Repository
                 var placedBet = new PlaceBet
                 {
                     Id = id,
-                    TypeOfBet =bet.TypeOfBet,
+                    BetName =bet.BetName,
                     NumbersOnTheTable = bet.NumbersOnTheTable,
                     BetAmount = bet.BetAmount,
                 };
@@ -66,13 +66,13 @@ namespace RouletteGameApi.Repository
 
         public async Task UpdateBet(int id, UpdateBetDto bet)
         {
-            var query = "UPDATE PlacedBets SET TypeOfBet = @TypeOfBet ," +
+            var query = "UPDATE PlacedBets SET BetName = @BetName ," +
                "NumbersOnTheTable = @NumbersOnTheTable," +
                "BetAmount=@BetAmount WHERE Id = @Id;";
 
             var parameters = new DynamicParameters();
             parameters.Add("@Id", id, DbType.Int32);
-            parameters.Add("@TypeOfBet", bet.TypeOfBet, DbType.String);
+            parameters.Add("@BetName", bet.BetName, DbType.String);
             parameters.Add("@NumbersOnTheTable", bet.NumbersOnTheTable, DbType.Int64);
             parameters.Add("@BetAmount", bet.BetAmount, DbType.Decimal);
             using (var connection = _context.CreateConnection())

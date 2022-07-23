@@ -24,7 +24,7 @@ namespace RouletteGameApi.Database
 
             connection.Execute("Create Table PlacedBets (" +
                 "Id INTEGER PRIMARY KEY  AUTOINCREMENT ," +
-                "TypeOfBet VARCHAR(50) NOT NULL," +
+                "BetName VARCHAR(50) NOT NULL," +
                 "NumbersOnTheTable INTEGER NOT NULL," +
                 "BetAmount DECIMAL(8,2) NOT NULL);");
 

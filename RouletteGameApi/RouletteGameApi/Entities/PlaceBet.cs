@@ -9,7 +9,7 @@ namespace RouletteGameApi.Entities
         
         [Required]
         [StringLength(50)]
-        public string?  TypeOfBet { get; set; }    
+        public string?  BetName { get; set; }    
 
         [Required]
         public int NumbersOnTheTable { get; set; }
@@ -20,7 +20,7 @@ namespace RouletteGameApi.Entities
         public decimal BetAmount { get; set; }
     }
     //The system currently support these types of bets only 
-    public enum TypeOfBet
+    public enum BetName
     {
          straightup, split ,street,corner,odd,even
     }

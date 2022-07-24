@@ -4,7 +4,7 @@ using System.Data;
 
 namespace RouletteGameApi.Context
 {
-    public class BetsDBContext
+    public class BetsDBContext:IBetsDBContext
     {
 		private readonly IConfiguration _configuration;
 		private readonly string _connectionString;

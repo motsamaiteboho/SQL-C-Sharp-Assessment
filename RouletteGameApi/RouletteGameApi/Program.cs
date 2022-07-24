@@ -12,15 +12,30 @@ namespace RouletteGameApi
         {
 
             var builder = WebApplication.CreateBuilder(args);
+
+            //crossorigin resource
+            var myAllowSpecificOrigins = "myAllowSpecificOrigins";
+
             // Add services to the container.
-             builder.Services.AddScoped<IRepositoryWrapper, RepositoryWrapper>();
+            builder.Services.AddScoped<IRepositoryWrapper, RepositoryWrapper>();
              builder.Services.AddControllers();
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
 
-            builder.Services.AddSingleton<BetsDBContext>();
+            builder.Services.AddSingleton<IBetsDBContext,BetsDBContext>();
             builder.Services.AddSingleton<IDatabaseBootstrap, DatabaseBootstrap>();
+
+            //Enable CORS
+            builder.Services.AddCors(options =>
+            {
+                options.AddPolicy(name: myAllowSpecificOrigins,
+                    builder =>
+                    {
+                        builder.WithOrigins("http://localhost:3000")
+                        .AllowAnyMethod().AllowAnyHeader();
+                    });
+            });
 
             var app = builder.Build();
 
@@ -33,6 +48,9 @@ namespace RouletteGameApi
             app.UseHttpsRedirection();
 
             app.UseAuthorization();
+            //add use cors
+            app.UseCors(myAllowSpecificOrigins);
+
             app.MapControllers();
 
             var logger = app.Services.GetRequiredService<ILogger<Program>>();

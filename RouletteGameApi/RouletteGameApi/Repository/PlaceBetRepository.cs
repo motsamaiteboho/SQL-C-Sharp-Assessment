@@ -1,8 +1,6 @@
 ﻿using Dapper;
-using Microsoft.Data.Sqlite;
 using RouletteGameApi.Context;
 using RouletteGameApi.Contracts;
-using RouletteGameApi.Database;
 using RouletteGameApi.Dto;
 using RouletteGameApi.Entities;
 using System.Data;
@@ -11,8 +9,8 @@ namespace RouletteGameApi.Repository
 {
     public class PlaceBetRepository : IPlaceBetRepository
     {
-        private readonly BetsDBContext _context;
-        public PlaceBetRepository(BetsDBContext context)
+        private readonly IBetsDBContext _context;
+        public PlaceBetRepository(IBetsDBContext context)
         {
             _context = context;
         }

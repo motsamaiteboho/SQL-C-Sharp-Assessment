@@ -1,14 +1,13 @@
 ﻿using Dapper;
-using Microsoft.Data.Sqlite;
 using RouletteGameApi.Context;
 
 namespace RouletteGameApi.Database
 {
     public class DatabaseBootstrap: IDatabaseBootstrap
     {
-        private readonly BetsDBContext  _context;
+        private readonly IBetsDBContext  _context;
 
-        public DatabaseBootstrap(BetsDBContext context)
+        public DatabaseBootstrap(IBetsDBContext context)
         {
             _context = context;
         }

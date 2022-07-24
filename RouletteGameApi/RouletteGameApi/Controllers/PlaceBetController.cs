@@ -1,10 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using RouletteGameApi.Contracts;
-using RouletteGameApi.Database;
 using RouletteGameApi.Dto;
-using RouletteGameApi.Entities;
-
-// For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
 namespace RouletteGameApi.Controllers
 {

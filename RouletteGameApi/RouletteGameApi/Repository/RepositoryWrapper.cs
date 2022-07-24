@@ -1,16 +1,14 @@
 ﻿using RouletteGameApi.Context;
 using RouletteGameApi.Contracts;
-using RouletteGameApi.Entities;
-
 namespace RouletteGameApi.Repository
 {
     public class RepositoryWrapper : IRepositoryWrapper
     {
-        private BetsDBContext _context;
+        private IBetsDBContext _context;
         private PayoutRepository _payoutRepository;
         private PlaceBetRepository _placeBetRepository;
         private SpinRepository _spinRepository;
-        public RepositoryWrapper(BetsDBContext context)
+        public RepositoryWrapper(IBetsDBContext context)
         {
             _context = context;
         }

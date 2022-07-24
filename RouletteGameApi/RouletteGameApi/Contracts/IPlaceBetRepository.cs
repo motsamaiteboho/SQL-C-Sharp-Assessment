@@ -5,10 +5,10 @@ namespace RouletteGameApi.Contracts
 {
     public interface IPlaceBetRepository
     {
-        public Task<IEnumerable<PlaceBet>> GetPlacedBets();
-        public Task<PlaceBet> PlaceBet(PlaceBetDto bet);
-        public Task<PlaceBet> GetPlacedBet(int id);
-        public  Task UpdateBet(int id, UpdateBetDto bet);  
-        public Task DeleteBet(int id);
+        Task<IEnumerable<PlaceBet>> GetPlacedBets();
+        Task<PlaceBet> PlaceBet(PlaceBetDto bet);
+        Task<PlaceBet> GetPlacedBet(int id);
+        Task UpdateBet(int id, UpdateBetDto bet);  
+        Task DeleteBet(int id);
     }
 }

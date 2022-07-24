@@ -1,11 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Newtonsoft.Json;
 using RouletteGameApi.Contracts;
-using RouletteGameApi.Database;
 using RouletteGameApi.Entities;
-using System.Text.Json;
-
-// For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
 namespace RouletteGameApi.Controllers
 {
@@ -19,9 +14,8 @@ namespace RouletteGameApi.Controllers
         {
             this.repository = repository;
         }
-        // GET: api/<SpinController>
         [HttpGet]
-        public async Task<Spin> Get()
+        public async Task<IActionResult> Get()
         {
             var winningnumber = (int)Random.Shared.Next(0, 37);
             var spin = new Spin()
@@ -29,13 +23,23 @@ namespace RouletteGameApi.Controllers
                 Id = Guid.NewGuid(),
                 WinningNumber = winningnumber,
             };
-            return await repository.spin.SpinWheel(spin);
+            var spinResult = await repository.spin.SpinWheel(spin);
+            if (spinResult == null)
+            {
+                return NotFound();
+            }
+            return  Ok(spinResult);
         } 
         [HttpGet]
         [Route("/showpreviosspins")]
-        public async Task<IEnumerable<Spin>> GetPreviousSpins()
+        public async Task<IActionResult> GetPreviousSpins()
         {
-            return await repository.spin.GetPreviousSpins();
+            var spins = await repository.spin.GetPreviousSpins();
+            if (spins == null)
+            {
+                return NotFound();
+            }
+            return Ok(spins);
         }
     }
 }

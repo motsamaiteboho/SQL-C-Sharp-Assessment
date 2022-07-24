@@ -1,11 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Newtonsoft.Json;
 using RouletteGameApi.Contracts;
-using RouletteGameApi.Database;
-using RouletteGameApi.Entities;
-using System.Text.Json;
-
-// For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
 namespace RouletteGameApi.Controllers
 {
@@ -18,7 +12,6 @@ namespace RouletteGameApi.Controllers
         {
             _repository = repository;
         }
-        // GET: api/<PayoutController>
         [HttpGet]
         public async Task<IActionResult> GetPayout(int id)
         {

@@ -7,8 +7,8 @@ namespace RouletteGameApi.Repository
 {
     public class PayoutRepository:IPayoutRepository
     {
-        private readonly BetsDBContext _context;
-        public PayoutRepository(BetsDBContext context)
+        private readonly IBetsDBContext _context;
+        public PayoutRepository(IBetsDBContext context)
         {
             _context = context;
         }

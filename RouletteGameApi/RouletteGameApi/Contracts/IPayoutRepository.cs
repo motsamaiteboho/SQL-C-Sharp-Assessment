@@ -4,7 +4,7 @@ namespace RouletteGameApi.Contracts
 {
     public interface IPayoutRepository
     {
-        public Task<Payout> GetPayout(int id);
+         Task<Payout> GetPayout(int id);
 
     }
 }

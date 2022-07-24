@@ -1,6 +1,4 @@
-﻿using Dapper;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Configuration;
+﻿using Microsoft.Extensions.Configuration;
 using Moq;
 using RouletteGameApi.Context;
 
@@ -8,7 +6,7 @@ namespace RouletteGameApi.UnitTests.Helpers
 {
     public abstract class TestBase
     {
-        public BetsDBContext GetDbContext()
+        public IBetsDBContext GetDbContext()
         {
             var mock = new Mock<IConfiguration>();
             IConfiguration configuration = mock.Object;

@@ -15,7 +15,12 @@
       "ProjectGuid": "ec0c8cb1-c950-4cf0-bb6f-00ee6508809c",
       "DisplayName": "RouletteGameApi.UnitTests",
       "ColorIndex": 1
+    },
+    "a4786514-13cf-4db5-8311-b1e08a8c52df": {
+      "ProjectGuid": "a4786514-13cf-4db5-8311-b1e08a8c52df",
+      "DisplayName": "Repository",
+      "ColorIndex": 2
     }
   },
-  "NextColorIndex": 2
+  "NextColorIndex": 3
 }

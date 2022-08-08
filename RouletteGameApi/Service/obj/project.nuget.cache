@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "rOuetZPZ0OC/DlhNXCkZGJPeufPRAHKt0TOkl+ukxD6IqQjjEEyhrSYSU1onC/PEdGn7dPJVQegChTRWsfDvRg==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Motsa\\Desktop\\Dervico\\SQL $ SHARP Assessment\\RouletteGameApi\\Service\\Service.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Motsa\\.nuget\\packages\\automapper\\11.0.1\\automapper.11.0.1.nupkg.sha512",
+    "C:\\Users\\Motsa\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512"
+  ],
+  "logs": []
+}

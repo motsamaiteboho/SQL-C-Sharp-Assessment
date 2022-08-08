@@ -4,6 +4,313 @@
     "C:\\Users\\Motsa\\Desktop\\Dervico\\SQL $ SHARP Assessment\\RouletteGameApi\\RouletteGameApi.UnitTests\\RouletteGameApi.UnitTests.csproj": {}
   },
   "projects": {
+    "C:\\Users\\Motsa\\Desktop\\Dervico\\SQL $ SHARP Assessment\\RouletteGameApi\\Contracts\\Contracts.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Motsa\\Desktop\\Dervico\\SQL $ SHARP Assessment\\RouletteGameApi\\Contracts\\Contracts.csproj",
+        "projectName": "Contracts",
+        "projectPath": "C:\\Users\\Motsa\\Desktop\\Dervico\\SQL $ SHARP Assessment\\RouletteGameApi\\Contracts\\Contracts.csproj",
+        "packagesPath": "C:\\Users\\Motsa\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Motsa\\Desktop\\Dervico\\SQL $ SHARP Assessment\\RouletteGameApi\\Contracts\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Motsa\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "C:\\Users\\Motsa\\Desktop\\Dervico\\SQL $ SHARP Assessment\\RouletteGameApi\\Entities\\Entities.csproj": {
+                "projectPath": "C:\\Users\\Motsa\\Desktop\\Dervico\\SQL $ SHARP Assessment\\RouletteGameApi\\Entities\\Entities.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.301\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\Motsa\\Desktop\\Dervico\\SQL $ SHARP Assessment\\RouletteGameApi\\Entities\\Entities.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Motsa\\Desktop\\Dervico\\SQL $ SHARP Assessment\\RouletteGameApi\\Entities\\Entities.csproj",
+        "projectName": "Entities",
+        "projectPath": "C:\\Users\\Motsa\\Desktop\\Dervico\\SQL $ SHARP Assessment\\RouletteGameApi\\Entities\\Entities.csproj",
+        "packagesPath": "C:\\Users\\Motsa\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Motsa\\Desktop\\Dervico\\SQL $ SHARP Assessment\\RouletteGameApi\\Entities\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Motsa\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.301\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\Motsa\\Desktop\\Dervico\\SQL $ SHARP Assessment\\RouletteGameApi\\LoggerService\\LoggerService.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Motsa\\Desktop\\Dervico\\SQL $ SHARP Assessment\\RouletteGameApi\\LoggerService\\LoggerService.csproj",
+        "projectName": "LoggerService",
+        "projectPath": "C:\\Users\\Motsa\\Desktop\\Dervico\\SQL $ SHARP Assessment\\RouletteGameApi\\LoggerService\\LoggerService.csproj",
+        "packagesPath": "C:\\Users\\Motsa\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Motsa\\Desktop\\Dervico\\SQL $ SHARP Assessment\\RouletteGameApi\\LoggerService\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Motsa\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "C:\\Users\\Motsa\\Desktop\\Dervico\\SQL $ SHARP Assessment\\RouletteGameApi\\Contracts\\Contracts.csproj": {
+                "projectPath": "C:\\Users\\Motsa\\Desktop\\Dervico\\SQL $ SHARP Assessment\\RouletteGameApi\\Contracts\\Contracts.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "NLog.Extensions.Logging": {
+              "target": "Package",
+              "version": "[5.0.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.301\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\Motsa\\Desktop\\Dervico\\SQL $ SHARP Assessment\\RouletteGameApi\\Repository\\Repository.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Motsa\\Desktop\\Dervico\\SQL $ SHARP Assessment\\RouletteGameApi\\Repository\\Repository.csproj",
+        "projectName": "Repository",
+        "projectPath": "C:\\Users\\Motsa\\Desktop\\Dervico\\SQL $ SHARP Assessment\\RouletteGameApi\\Repository\\Repository.csproj",
+        "packagesPath": "C:\\Users\\Motsa\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Motsa\\Desktop\\Dervico\\SQL $ SHARP Assessment\\RouletteGameApi\\Repository\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Motsa\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "C:\\Users\\Motsa\\Desktop\\Dervico\\SQL $ SHARP Assessment\\RouletteGameApi\\Contracts\\Contracts.csproj": {
+                "projectPath": "C:\\Users\\Motsa\\Desktop\\Dervico\\SQL $ SHARP Assessment\\RouletteGameApi\\Contracts\\Contracts.csproj"
+              },
+              "C:\\Users\\Motsa\\Desktop\\Dervico\\SQL $ SHARP Assessment\\RouletteGameApi\\Entities\\Entities.csproj": {
+                "projectPath": "C:\\Users\\Motsa\\Desktop\\Dervico\\SQL $ SHARP Assessment\\RouletteGameApi\\Entities\\Entities.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[6.0.7, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.301\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\Motsa\\Desktop\\Dervico\\SQL $ SHARP Assessment\\RouletteGameApi\\RouletteGameApi.Presentation\\RouletteGameApi.Presentation.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Motsa\\Desktop\\Dervico\\SQL $ SHARP Assessment\\RouletteGameApi\\RouletteGameApi.Presentation\\RouletteGameApi.Presentation.csproj",
+        "projectName": "RouletteGameApi.Presentation",
+        "projectPath": "C:\\Users\\Motsa\\Desktop\\Dervico\\SQL $ SHARP Assessment\\RouletteGameApi\\RouletteGameApi.Presentation\\RouletteGameApi.Presentation.csproj",
+        "packagesPath": "C:\\Users\\Motsa\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Motsa\\Desktop\\Dervico\\SQL $ SHARP Assessment\\RouletteGameApi\\RouletteGameApi.Presentation\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Motsa\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "C:\\Users\\Motsa\\Desktop\\Dervico\\SQL $ SHARP Assessment\\RouletteGameApi\\Service.Contracts\\Service.Contracts.csproj": {
+                "projectPath": "C:\\Users\\Motsa\\Desktop\\Dervico\\SQL $ SHARP Assessment\\RouletteGameApi\\Service.Contracts\\Service.Contracts.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Mvc.Core": {
+              "target": "Package",
+              "version": "[2.2.5, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.301\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
     "C:\\Users\\Motsa\\Desktop\\Dervico\\SQL $ SHARP Assessment\\RouletteGameApi\\RouletteGameApi.UnitTests\\RouletteGameApi.UnitTests.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -119,7 +426,20 @@
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "C:\\Users\\Motsa\\Desktop\\Dervico\\SQL $ SHARP Assessment\\RouletteGameApi\\LoggerService\\LoggerService.csproj": {
+                "projectPath": "C:\\Users\\Motsa\\Desktop\\Dervico\\SQL $ SHARP Assessment\\RouletteGameApi\\LoggerService\\LoggerService.csproj"
+              },
+              "C:\\Users\\Motsa\\Desktop\\Dervico\\SQL $ SHARP Assessment\\RouletteGameApi\\Repository\\Repository.csproj": {
+                "projectPath": "C:\\Users\\Motsa\\Desktop\\Dervico\\SQL $ SHARP Assessment\\RouletteGameApi\\Repository\\Repository.csproj"
+              },
+              "C:\\Users\\Motsa\\Desktop\\Dervico\\SQL $ SHARP Assessment\\RouletteGameApi\\RouletteGameApi.Presentation\\RouletteGameApi.Presentation.csproj": {
+                "projectPath": "C:\\Users\\Motsa\\Desktop\\Dervico\\SQL $ SHARP Assessment\\RouletteGameApi\\RouletteGameApi.Presentation\\RouletteGameApi.Presentation.csproj"
+              },
+              "C:\\Users\\Motsa\\Desktop\\Dervico\\SQL $ SHARP Assessment\\RouletteGameApi\\Service\\Service.csproj": {
+                "projectPath": "C:\\Users\\Motsa\\Desktop\\Dervico\\SQL $ SHARP Assessment\\RouletteGameApi\\Service\\Service.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
@@ -132,6 +452,10 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "AutoMapper.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[11.0.0, )"
+            },
             "Dapper": {
               "target": "Package",
               "version": "[2.0.123, )"
@@ -148,6 +472,10 @@
               "target": "Package",
               "version": "[6.0.7, )"
             },
+            "Microsoft.EntityFrameworkCore.Sqlite.Design": {
+              "target": "Package",
+              "version": "[1.1.6, )"
+            },
             "Microsoft.EntityFrameworkCore.Tools": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
@@ -160,7 +488,7 @@
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
-              "version": "[6.2.3, )"
+              "version": "[6.4.0, )"
             }
           },
           "imports": [
@@ -177,6 +505,185 @@
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
             },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.301\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\Motsa\\Desktop\\Dervico\\SQL $ SHARP Assessment\\RouletteGameApi\\Service.Contracts\\Service.Contracts.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Motsa\\Desktop\\Dervico\\SQL $ SHARP Assessment\\RouletteGameApi\\Service.Contracts\\Service.Contracts.csproj",
+        "projectName": "Service.Contracts",
+        "projectPath": "C:\\Users\\Motsa\\Desktop\\Dervico\\SQL $ SHARP Assessment\\RouletteGameApi\\Service.Contracts\\Service.Contracts.csproj",
+        "packagesPath": "C:\\Users\\Motsa\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Motsa\\Desktop\\Dervico\\SQL $ SHARP Assessment\\RouletteGameApi\\Service.Contracts\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Motsa\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "C:\\Users\\Motsa\\Desktop\\Dervico\\SQL $ SHARP Assessment\\RouletteGameApi\\Shared\\Shared.csproj": {
+                "projectPath": "C:\\Users\\Motsa\\Desktop\\Dervico\\SQL $ SHARP Assessment\\RouletteGameApi\\Shared\\Shared.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.301\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\Motsa\\Desktop\\Dervico\\SQL $ SHARP Assessment\\RouletteGameApi\\Service\\Service.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Motsa\\Desktop\\Dervico\\SQL $ SHARP Assessment\\RouletteGameApi\\Service\\Service.csproj",
+        "projectName": "Service",
+        "projectPath": "C:\\Users\\Motsa\\Desktop\\Dervico\\SQL $ SHARP Assessment\\RouletteGameApi\\Service\\Service.csproj",
+        "packagesPath": "C:\\Users\\Motsa\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Motsa\\Desktop\\Dervico\\SQL $ SHARP Assessment\\RouletteGameApi\\Service\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Motsa\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "C:\\Users\\Motsa\\Desktop\\Dervico\\SQL $ SHARP Assessment\\RouletteGameApi\\Contracts\\Contracts.csproj": {
+                "projectPath": "C:\\Users\\Motsa\\Desktop\\Dervico\\SQL $ SHARP Assessment\\RouletteGameApi\\Contracts\\Contracts.csproj"
+              },
+              "C:\\Users\\Motsa\\Desktop\\Dervico\\SQL $ SHARP Assessment\\RouletteGameApi\\Service.Contracts\\Service.Contracts.csproj": {
+                "projectPath": "C:\\Users\\Motsa\\Desktop\\Dervico\\SQL $ SHARP Assessment\\RouletteGameApi\\Service.Contracts\\Service.Contracts.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[11.0.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.301\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\Motsa\\Desktop\\Dervico\\SQL $ SHARP Assessment\\RouletteGameApi\\Shared\\Shared.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Motsa\\Desktop\\Dervico\\SQL $ SHARP Assessment\\RouletteGameApi\\Shared\\Shared.csproj",
+        "projectName": "Shared",
+        "projectPath": "C:\\Users\\Motsa\\Desktop\\Dervico\\SQL $ SHARP Assessment\\RouletteGameApi\\Shared\\Shared.csproj",
+        "packagesPath": "C:\\Users\\Motsa\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Motsa\\Desktop\\Dervico\\SQL $ SHARP Assessment\\RouletteGameApi\\Shared\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Motsa\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }

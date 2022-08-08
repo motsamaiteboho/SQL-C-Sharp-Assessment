@@ -28,4 +28,8 @@
     <ProjectReference Include="..\RouletteGameApi\RouletteGameApi.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Repositories\" />
+  </ItemGroup>
+
 </Project>

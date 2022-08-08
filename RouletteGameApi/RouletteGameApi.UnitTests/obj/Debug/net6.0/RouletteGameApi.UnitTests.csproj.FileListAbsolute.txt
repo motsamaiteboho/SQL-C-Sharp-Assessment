@@ -142,3 +142,17 @@ C:\Users\Motsa\Desktop\Dervico\SQL $ SHARP Assessment\RouletteGameApi\RouletteGa
 C:\Users\Motsa\Desktop\Dervico\SQL $ SHARP Assessment\RouletteGameApi\RouletteGameApi.UnitTests\obj\Debug\net6.0\RouletteGameApi.UnitTests.pdb
 C:\Users\Motsa\Desktop\Dervico\SQL $ SHARP Assessment\RouletteGameApi\RouletteGameApi.UnitTests\obj\Debug\net6.0\RouletteGameApi.UnitTests.genruntimeconfig.cache
 C:\Users\Motsa\Desktop\Dervico\SQL $ SHARP Assessment\RouletteGameApi\RouletteGameApi.UnitTests\bin\Debug\net6.0\FakeItEasy.dll
+C:\Users\Motsa\Desktop\Dervico\SQL $ SHARP Assessment\RouletteGameApi\RouletteGameApi.UnitTests\bin\Debug\net6.0\nlog.config
+C:\Users\Motsa\Desktop\Dervico\SQL $ SHARP Assessment\RouletteGameApi\RouletteGameApi.UnitTests\bin\Debug\net6.0\appsettings.Production.json
+C:\Users\Motsa\Desktop\Dervico\SQL $ SHARP Assessment\RouletteGameApi\RouletteGameApi.UnitTests\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Relational.Design.dll
+C:\Users\Motsa\Desktop\Dervico\SQL $ SHARP Assessment\RouletteGameApi\RouletteGameApi.UnitTests\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Sqlite.Design.dll
+C:\Users\Motsa\Desktop\Dervico\SQL $ SHARP Assessment\RouletteGameApi\RouletteGameApi.UnitTests\bin\Debug\net6.0\NLog.dll
+C:\Users\Motsa\Desktop\Dervico\SQL $ SHARP Assessment\RouletteGameApi\RouletteGameApi.UnitTests\bin\Debug\net6.0\NLog.Extensions.Logging.dll
+C:\Users\Motsa\Desktop\Dervico\SQL $ SHARP Assessment\RouletteGameApi\RouletteGameApi.UnitTests\bin\Debug\net6.0\Contracts.dll
+C:\Users\Motsa\Desktop\Dervico\SQL $ SHARP Assessment\RouletteGameApi\RouletteGameApi.UnitTests\bin\Debug\net6.0\Entities.dll
+C:\Users\Motsa\Desktop\Dervico\SQL $ SHARP Assessment\RouletteGameApi\RouletteGameApi.UnitTests\bin\Debug\net6.0\LoggerService.dll
+C:\Users\Motsa\Desktop\Dervico\SQL $ SHARP Assessment\RouletteGameApi\RouletteGameApi.UnitTests\bin\Debug\net6.0\Repository.dll
+C:\Users\Motsa\Desktop\Dervico\SQL $ SHARP Assessment\RouletteGameApi\RouletteGameApi.UnitTests\bin\Debug\net6.0\Contracts.pdb
+C:\Users\Motsa\Desktop\Dervico\SQL $ SHARP Assessment\RouletteGameApi\RouletteGameApi.UnitTests\bin\Debug\net6.0\Entities.pdb
+C:\Users\Motsa\Desktop\Dervico\SQL $ SHARP Assessment\RouletteGameApi\RouletteGameApi.UnitTests\bin\Debug\net6.0\LoggerService.pdb
+C:\Users\Motsa\Desktop\Dervico\SQL $ SHARP Assessment\RouletteGameApi\RouletteGameApi.UnitTests\bin\Debug\net6.0\Repository.pdb

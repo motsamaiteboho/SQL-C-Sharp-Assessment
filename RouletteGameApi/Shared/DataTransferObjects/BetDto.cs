@@ -6,6 +6,12 @@ using System.Threading.Tasks;
 
 namespace Shared.DataTransferObjects
 {
-    public  record BetDto(Guid Id, string BetOn, DateTime TimestampUtc, 
-        decimal BetValue, decimal BetWinnings);
+    public  record BetDto 
+    {
+        public Guid Id { get; init; }
+        public string? BetOn { get; init; }
+        public DateTime TimestampUtc { get; init; }
+        public decimal BetValue { get; init; }
+        public decimal BetinniWngs  { get; init; }
+    }
 }

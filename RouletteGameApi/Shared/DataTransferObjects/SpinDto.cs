@@ -6,5 +6,10 @@ using System.Threading.Tasks;
 
 namespace Shared.DataTransferObjects
 {
-    public record SpinDto(Guid Id, long SpinResult, DateTime TimestampUtc);
+    public record SpinDto 
+    { 
+        public Guid Id { get; init; }
+        public long SpinResult { get; init; }
+        public DateTime TimestampUtc { get; init; }
+    };
 }

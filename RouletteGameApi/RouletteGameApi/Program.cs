@@ -22,8 +22,13 @@ namespace RouletteGameApi
             builder.Services.ConfigureRepositoryManager();
             builder.Services.ConfigureServiceManager();
             builder.Services.AddAutoMapper(typeof(Program));
-            builder.Services.AddControllers()
-                .AddApplicationPart(typeof(RouletteGameApi.Presentation.AssemblyReference).Assembly); ;
+
+            builder.Services.AddControllers(config => { 
+                config.RespectBrowserAcceptHeader = true;
+                config.ReturnHttpNotAcceptable = true;
+            }).AddXmlDataContractSerializerFormatters()
+               .AddCustomCSVFormatter()
+              .AddApplicationPart(typeof(RouletteGameApi.Presentation.AssemblyReference).Assembly); ;
 
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();

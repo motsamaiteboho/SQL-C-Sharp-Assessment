@@ -20,7 +20,42 @@
       "ProjectGuid": "a4786514-13cf-4db5-8311-b1e08a8c52df",
       "DisplayName": "Repository",
       "ColorIndex": 2
+    },
+    "73d4e4c7-d6dd-4489-9be7-2d9a0cb508a9": {
+      "ProjectGuid": "73d4e4c7-d6dd-4489-9be7-2d9a0cb508a9",
+      "DisplayName": "Service",
+      "ColorIndex": 3
+    },
+    "bd640367-1564-4857-a944-213ae1fbafe5": {
+      "ProjectGuid": "bd640367-1564-4857-a944-213ae1fbafe5",
+      "DisplayName": "RouletteGameApi.Presentation",
+      "ColorIndex": 4
+    },
+    "616f9ed2-2233-468a-814b-1f4038143b08": {
+      "ProjectGuid": "616f9ed2-2233-468a-814b-1f4038143b08",
+      "DisplayName": "Service.Contracts",
+      "ColorIndex": 5
+    },
+    "32dbc0e1-39af-4260-9aa3-9cfaf91ef138": {
+      "ProjectGuid": "32dbc0e1-39af-4260-9aa3-9cfaf91ef138",
+      "DisplayName": "Contracts",
+      "ColorIndex": 6
+    },
+    "312769bb-9a98-4a2d-a6fe-2aba91973caf": {
+      "ProjectGuid": "312769bb-9a98-4a2d-a6fe-2aba91973caf",
+      "DisplayName": "Shared",
+      "ColorIndex": 7
+    },
+    "c028186e-5610-4916-95c1-99c39f9274b1": {
+      "ProjectGuid": "c028186e-5610-4916-95c1-99c39f9274b1",
+      "DisplayName": "Entities",
+      "ColorIndex": 8
+    },
+    "a688ed48-15e0-4b62-add8-6bcdc9fd5aa8": {
+      "ProjectGuid": "a688ed48-15e0-4b62-add8-6bcdc9fd5aa8",
+      "DisplayName": "LoggerService",
+      "ColorIndex": 9
     }
   },
-  "NextColorIndex": 3
+  "NextColorIndex": 10
 }

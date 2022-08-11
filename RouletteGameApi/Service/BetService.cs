@@ -27,6 +27,8 @@ namespace Service
 		}
 		public async Task<(IEnumerable<BetDto> bets, MetaData MetaData)> GetAllBetsAsync(BetParameters betParameters, bool trackChanges)
 		{
+			if (!betParameters.ValidValueRange)
+				throw new MaxValueRangeBadRequestException();
 			var betsWithMetaData = await _repository.Bet.GetAllBetsAsync(betParameters, trackChanges);
 
 			var betsDto = _mapper.Map<IEnumerable<BetDto>>(betsWithMetaData);

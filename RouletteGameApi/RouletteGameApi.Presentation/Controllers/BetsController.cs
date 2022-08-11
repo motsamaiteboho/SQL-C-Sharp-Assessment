@@ -38,6 +38,7 @@ namespace RouletteGameApi.Presentation.Controllers
 			
 			return Ok(bet); 
 		}
+
         [HttpGet("collection/({ids})", Name = "betCollection")]
         public async Task<IActionResult> GetBetCollection
         ([ModelBinder(BinderType = typeof(ArrayModelBinder))] IEnumerable<Guid> ids)

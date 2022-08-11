@@ -1,6 +1,7 @@
 ﻿using Contracts;
 using Entities.Models;
 using Microsoft.EntityFrameworkCore;
+using Repository.Extensions;
 using Shared.RequestFeatures;
 using System;
 using System.Collections.Generic;
@@ -20,9 +21,15 @@ namespace Repository
         public async Task<PagedList<Bet>> GetAllBetsAsync(BetParameters betParameters, bool trackChanges)
         {
            var bets =  await FindAll(trackChanges)
-                                .OrderBy(c => c.TimestampUtc)
+                        .FilterBets(betParameters.MinValue, betParameters.MaxValue)
+                          .Search(betParameters.SearchTerm)
+                            .Skip((betParameters.PageNumber-1)* betParameters.PageSize )
+                              .Take(betParameters.PageSize)
+                                .Sort(betParameters.OrderBy)
                                     .ToListAsync();
-            return PagedList<Bet>.ToPagedList(bets, betParameters.PageNumber,
+            var count = await FindAll(trackChanges).CountAsync();
+
+            return new  PagedList<Bet>(bets,count, betParameters.PageNumber,
                 betParameters.PageSize);
         }
 

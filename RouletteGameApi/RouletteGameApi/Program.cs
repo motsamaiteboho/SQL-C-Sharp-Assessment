@@ -4,6 +4,10 @@ using RouletteGameApi.Extensions;
 using RouletteGameApi.Presentation;
 using RouletteGameApi.Extensions.ServiceExtensions;
 using Contracts;
+using Microsoft.AspNetCore.Mvc.Formatters;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Options;
+using RouletteGameApi.Presentation.ActionFilters;
 
 namespace RouletteGameApi
 {
@@ -22,10 +26,16 @@ namespace RouletteGameApi
             builder.Services.ConfigureRepositoryManager();
             builder.Services.ConfigureServiceManager();
             builder.Services.AddAutoMapper(typeof(Program));
-
+            builder.Services.Configure<ApiBehaviorOptions>(options =>
+            {
+                options.SuppressModelStateInvalidFilter = true;
+            });
+            builder.Services.AddScoped<ValidationFilterAttribute>();
             builder.Services.AddControllers(config => { 
                 config.RespectBrowserAcceptHeader = true;
                 config.ReturnHttpNotAcceptable = true;
+                config.InputFormatters.Insert(0, GetJsonPatchInputFormatter());
+                config.CacheProfiles.Add("120SecondsDuration", new CacheProfile { Duration = 120 });
             }).AddXmlDataContractSerializerFormatters()
                .AddCustomCSVFormatter()
               .AddApplicationPart(typeof(RouletteGameApi.Presentation.AssemblyReference).Assembly); ;
@@ -56,6 +66,12 @@ namespace RouletteGameApi
             app.MapControllers();
 
             app.Run();
+
+            NewtonsoftJsonPatchInputFormatter GetJsonPatchInputFormatter() =>
+                new ServiceCollection().AddLogging().AddMvc().AddNewtonsoftJson()
+                .Services.BuildServiceProvider()
+                    .GetRequiredService<IOptions<MvcOptions>>().Value.InputFormatters
+                         .OfType<NewtonsoftJsonPatchInputFormatter>().First();
         }
     }
 }

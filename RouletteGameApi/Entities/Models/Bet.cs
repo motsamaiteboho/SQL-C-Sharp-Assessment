@@ -13,7 +13,7 @@ namespace Entities.Models
         [Column("BetId")]
         public Guid Id { get; set; }
 
-        [Required(ErrorMessage = "bet name is a required field.")]
+        [Required(ErrorMessage = "betOn name is a required field.")]
         [MaxLength(60, ErrorMessage = "Maximum length for the Name is 60 characters.")]
         public string BetOn { get; set; } = null!;
 
@@ -21,7 +21,7 @@ namespace Entities.Models
 
         [Column(TypeName = "decimal(8, 2)")]
         [Required]
-        [Range(0.01, double.MaxValue)]
+        [Range(0.01, double.MaxValue, ErrorMessage = "should be  positive amount.")]
         public decimal  BetValue { get; set; }
 
         public  Spin? Spin { get; set; }

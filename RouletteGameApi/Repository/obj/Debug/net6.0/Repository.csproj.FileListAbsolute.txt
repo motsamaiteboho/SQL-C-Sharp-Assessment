@@ -15,3 +15,5 @@ C:\Users\Motsa\Desktop\Dervico\SQL $ SHARP Assessment\RouletteGameApi\Repository
 C:\Users\Motsa\Desktop\Dervico\SQL $ SHARP Assessment\RouletteGameApi\Repository\obj\Debug\net6.0\Repository.pdb
 C:\Users\Motsa\Desktop\Dervico\SQL $ SHARP Assessment\RouletteGameApi\Repository\bin\Debug\net6.0\Contracts.dll
 C:\Users\Motsa\Desktop\Dervico\SQL $ SHARP Assessment\RouletteGameApi\Repository\bin\Debug\net6.0\Contracts.pdb
+C:\Users\Motsa\Desktop\Dervico\SQL $ SHARP Assessment\RouletteGameApi\Repository\bin\Debug\net6.0\Shared.dll
+C:\Users\Motsa\Desktop\Dervico\SQL $ SHARP Assessment\RouletteGameApi\Repository\bin\Debug\net6.0\Shared.pdb

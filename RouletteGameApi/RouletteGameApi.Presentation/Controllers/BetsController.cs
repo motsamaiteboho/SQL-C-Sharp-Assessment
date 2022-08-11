@@ -3,10 +3,12 @@ using RouletteGameApi.Presentation.ActionFilters;
 using RouletteGameApi.Presentation.ModelBinders;
 using Service.Contracts;
 using Shared.DataTransferObjects;
+using Shared.RequestFeatures;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.Json;
 using System.Threading.Tasks;
 
 namespace RouletteGameApi.Presentation.Controllers
@@ -20,11 +22,13 @@ namespace RouletteGameApi.Presentation.Controllers
 		public BetsController(IServiceManager service) => _service = service;
 
 		[HttpGet]
-		public async Task<IActionResult> GetBets()
+		public async Task<IActionResult> GetBets([FromQuery] BetParameters betParameters)
 		{
-				var bets = await _service.BetService.GetAllBetsAsync(trackChanges: false);
+				var pagedResult = await _service.BetService.GetAllBetsAsync(betParameters, trackChanges: false);
 
-				return Ok(bets);
+            Response.Headers.Add("X-Pagination", JsonSerializer.Serialize(pagedResult.MetaData));
+
+				return Ok(pagedResult.bets);
 		}
 
 		[HttpGet("{id:guid}", Name = "BetById")]

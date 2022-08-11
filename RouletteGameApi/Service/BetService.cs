@@ -4,6 +4,7 @@ using Entities.Exceptions;
 using Entities.Models;
 using Service.Contracts;
 using Shared.DataTransferObjects;
+using Shared.RequestFeatures;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -24,13 +25,13 @@ namespace Service
 			_logger = logger;
 			_mapper = mapper;
 		}
-		public async Task<IEnumerable<BetDto>> GetAllBetsAsync(bool trackChanges)
+		public async Task<(IEnumerable<BetDto> bets, MetaData MetaData)> GetAllBetsAsync(BetParameters betParameters, bool trackChanges)
 		{
-			var bets = await _repository.Bet.GetAllBetsAsync(trackChanges);
+			var betsWithMetaData = await _repository.Bet.GetAllBetsAsync(betParameters, trackChanges);
 
-			var betsDto = _mapper.Map<IEnumerable<BetDto>>(bets);
+			var betsDto = _mapper.Map<IEnumerable<BetDto>>(betsWithMetaData);
 
-			return betsDto;
+			return (bets: betsDto, MetaData: betsWithMetaData.MetaData);
 		}
 
 		public async Task<BetDto> GetBetAsync(Guid id, bool trackChanges)

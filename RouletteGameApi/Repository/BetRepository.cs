@@ -1,6 +1,7 @@
 ﻿using Contracts;
 using Entities.Models;
 using Microsoft.EntityFrameworkCore;
+using Shared.RequestFeatures;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,10 +17,14 @@ namespace Repository
         { 
         }
 
-        public async Task<IEnumerable<Bet>> GetAllBetsAsync( bool trackChanges) => 
-           await FindAll(trackChanges)
-            .OrderBy(c => c.TimestampUtc)
-            .ToListAsync();
+        public async Task<PagedList<Bet>> GetAllBetsAsync(BetParameters betParameters, bool trackChanges)
+        {
+           var bets =  await FindAll(trackChanges)
+                                .OrderBy(c => c.TimestampUtc)
+                                    .ToListAsync();
+            return PagedList<Bet>.ToPagedList(bets, betParameters.PageNumber,
+                betParameters.PageSize);
+        }
 
         public async Task<Bet> GetBetAsync(Guid betId,bool trackChanges) => 
             await FindByCondition(c => c.Id.Equals(betId), trackChanges)

@@ -30,6 +30,9 @@
             "projectReferences": {
               "C:\\Users\\Motsa\\Desktop\\Dervico\\SQL $ SHARP Assessment\\RouletteGameApi\\Entities\\Entities.csproj": {
                 "projectPath": "C:\\Users\\Motsa\\Desktop\\Dervico\\SQL $ SHARP Assessment\\RouletteGameApi\\Entities\\Entities.csproj"
+              },
+              "C:\\Users\\Motsa\\Desktop\\Dervico\\SQL $ SHARP Assessment\\RouletteGameApi\\Shared\\Shared.csproj": {
+                "projectPath": "C:\\Users\\Motsa\\Desktop\\Dervico\\SQL $ SHARP Assessment\\RouletteGameApi\\Shared\\Shared.csproj"
               }
             }
           }

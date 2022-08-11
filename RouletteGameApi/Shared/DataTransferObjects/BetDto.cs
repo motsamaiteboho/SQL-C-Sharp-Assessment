@@ -12,6 +12,5 @@ namespace Shared.DataTransferObjects
         public string? BetOn { get; init; }
         public DateTime TimestampUtc { get; init; }
         public decimal BetValue { get; init; }
-        public decimal BetinniWngs  { get; init; }
     }
 }

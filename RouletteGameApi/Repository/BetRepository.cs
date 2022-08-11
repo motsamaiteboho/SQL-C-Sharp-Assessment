@@ -1,5 +1,6 @@
 ﻿using Contracts;
 using Entities.Models;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,14 +16,21 @@ namespace Repository
         { 
         }
 
-        public IEnumerable<Bet> GetAllBets(Guid spinId, bool trackChanges) => 
-            FindAll(trackChanges)
-            .Where(Id => Id.SpinId == spinId)
+        public async Task<IEnumerable<Bet>> GetAllBetsAsync( bool trackChanges) => 
+           await FindAll(trackChanges)
             .OrderBy(c => c.TimestampUtc)
-            .ToList();
+            .ToListAsync();
 
-        public Bet GetBet(Guid betId, Guid spinId,bool trackChanges) => 
-            FindByCondition(c => c.Id.Equals(betId) && c.SpinId.Equals(spinId), trackChanges)
-            .SingleOrDefault();
+        public async Task<Bet> GetBetAsync(Guid betId,bool trackChanges) => 
+            await FindByCondition(c => c.Id.Equals(betId), trackChanges)
+            .SingleOrDefaultAsync();
+
+        public void PlaceBetForNextSpin(Bet bet)
+        {
+            Create(bet);
+        }
+        public async Task<IEnumerable<Bet>> GetByIdsAsync(IEnumerable<Guid> ids, bool trackChanges) =>
+          await FindByCondition(x => ids.Contains(x.Id), trackChanges)
+          .ToListAsync();
     }
 }

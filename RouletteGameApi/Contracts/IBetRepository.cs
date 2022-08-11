@@ -9,7 +9,9 @@ namespace Contracts
 {
     public interface IBetRepository
     {
-        IEnumerable<Bet> GetAllBets(Guid spinId, bool trackChanges);
-        Bet GetBet(Guid betId, Guid spinId, bool trackChanges);
+        Task<IEnumerable<Bet>> GetAllBetsAsync(bool trackChanges);
+        Task<Bet> GetBetAsync(Guid betId, bool trackChanges);
+        void PlaceBetForNextSpin(Bet bet);
+        Task<IEnumerable<Bet>> GetByIdsAsync(IEnumerable<Guid> ids, bool trackChanges);
     }
 }

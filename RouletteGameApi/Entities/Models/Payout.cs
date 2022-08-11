@@ -12,7 +12,14 @@ namespace Entities.Models
         [Column("PayoutId")]
         public Guid Id { get; set; }
         public DateTime TimestampUtc { get; set; }
+        public decimal TotalPayout { get; set; }
 
-        public ICollection<Bet>? Bets { get; set; }
+        [ForeignKey(nameof(Bet))]
+        public Guid? BetId { get; set; }
+        public Bet? Bet { get; set; }
+
+        [ForeignKey(nameof(Spin))]
+        public Guid? SpinId { get; set; }
+        public Spin? Spin { get; set; }
     }
 }

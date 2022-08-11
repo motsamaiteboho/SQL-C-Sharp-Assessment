@@ -9,7 +9,8 @@ namespace Service.Contracts
 {
     public interface ISpinService
     {
-        IEnumerable<SpinDto> GetAllSpins(bool trackChanges);
-        SpinDto GetSpin(Guid spinId, bool trackChanges);
+        Task<IEnumerable<SpinDto>> GetAllSpinsAsync(bool trackChanges);
+        Task<SpinDto> GetSpinAsync(Guid spinId, bool trackChanges);
+        Task<SpinDto> GetNextSpinAsync(Guid betId,bool trackChanges);
     }
 }

@@ -9,7 +9,8 @@ namespace Contracts
 {
     public interface ISpinRepository
     {
-        IEnumerable<Spin> GetAllSpins(bool trackChanges);
-        Spin GetSpin(Guid spinId, bool trackChanges);  
+        Task<IEnumerable<Spin>> GetAllSpinsAsync(bool trackChanges);
+        Task<Spin> GetSpinAsync(Guid spinId, bool trackChanges);
+        Task<Spin> GetNextSpinAsync(Guid betId, bool trackChanges);
     }
 }

@@ -1,5 +1,6 @@
 ﻿using Contracts;
 using Entities.Models;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,5 +15,14 @@ namespace Repository
             : base(repositoryContext)
         {
         }
+        public async Task< IEnumerable<Payout>> GetAllPayoutsAsync(Guid spinId, Guid betId, bool trackChanges) =>
+          await FindAll(trackChanges)
+          .Where(Id => Id.SpinId == spinId && Id.BetId == betId)
+          .OrderBy(c => c.TimestampUtc)
+          .ToListAsync();
+
+        public async Task<Payout> GetPayoutAsync(Guid Id, Guid spinId, Guid betId, bool trackChanges) =>
+           await FindByCondition(c => c.Id.Equals(Id) && c.BetId.Equals(betId) && c.SpinId.Equals(spinId), trackChanges)
+            .SingleOrDefaultAsync();
     }
 }

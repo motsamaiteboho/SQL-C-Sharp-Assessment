@@ -25,6 +25,6 @@ namespace Repository
 		public IBetRepository Bet => _betRepository.Value;
 		public ISpinRepository Spin => _spinRepository.Value;
 		public IPayoutRepository Payout => _payoutRepository.Value;
-		public  void Save() => _repositoryContext.SaveChanges();
+		public  Task SaveAsync() => _repositoryContext.SaveChangesAsync();
 	}
 }

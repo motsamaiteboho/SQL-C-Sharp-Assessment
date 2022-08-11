@@ -48,7 +48,7 @@ namespace RouletteGameApi
 
 		private static void FormatCsv(StringBuilder buffer, SpinDto spin)
 		{
-			buffer.AppendLine($"{spin.Id},\"{spin.SpinResult},\"{spin.TimestampUtc}\"");
+			buffer.AppendLine($"{spin.Id},\"{spin.SpinResult}\",\"{spin.TimestampUtc}\"");
 		}
 
 	}

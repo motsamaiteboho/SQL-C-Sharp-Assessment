@@ -17,20 +17,27 @@ namespace RouletteGameApi.Presentation.Controllers
 		public SpinsController(IServiceManager service) => _service = service;
 
 		[HttpGet]
-		public IActionResult GetSpins()
+		public async Task<IActionResult> GetSpins()
 		{
-			var spins = _service.SpinService.GetAllSpins(trackChanges: false);
+			var spins = await  _service.SpinService.GetAllSpinsAsync(trackChanges: false);
 
 			return Ok(spins);
 		}
 
-		[HttpGet("{id:Guid}")]
-		public IActionResult GetSpin(Guid id)
+		[HttpGet("bets/{betId}/nextspin")]
+		public async Task<IActionResult> GetNextSpin(Guid betId)
 		{
-			var spins = _service.SpinService.GetSpin(id, trackChanges: false);
+			var spin = await _service.SpinService.GetNextSpinAsync(betId,trackChanges: false);
+
+			return Ok(spin);
+		}
+
+		[HttpGet("{id:guid}", Name ="SpinById")]
+		public async Task<IActionResult> GetSpin(Guid id)
+		{
+			var spins = await _service.SpinService.GetSpinAsync(id, trackChanges: false);
 
 			return Ok(spins);
 		}
 	}
-	
 }

@@ -3,13 +3,18 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Entities.Models;
 using Shared.DataTransferObjects;
 
 namespace Service.Contracts
 {
     public interface IBetService
     {
-        IEnumerable<BetDto> GetAllBets(Guid spinId, bool trackChanges);
-        BetDto GetBet(Guid betId, Guid spinId, bool trackChanges);
+        Task<IEnumerable<BetDto>> GetAllBetsAsync( bool trackChanges);
+        Task<BetDto> GetBetAsync(Guid betId, bool trackChanges);
+        Task<BetDto> PlaceBetForNextSpinAsync(BetForCreationDto betForCreation, bool trackChanges);
+        Task<IEnumerable<BetDto>> GetByIdsAsync(IEnumerable<Guid> ids, bool trackChanges);
+        Task<(IEnumerable<BetDto> bets, string ids)> CreateBetCollectionAsync(IEnumerable<BetForCreationDto> betCollection);
+        Task UpdateBetAsync(Guid betid, BetForUpdateDto betForUpdate, bool trackChanges);
     }
 }

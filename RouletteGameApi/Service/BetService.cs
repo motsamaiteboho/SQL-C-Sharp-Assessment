@@ -24,27 +24,80 @@ namespace Service
 			_logger = logger;
 			_mapper = mapper;
 		}
-		public IEnumerable<BetDto> GetAllBets(Guid spinId,bool trackChanges)
+		public async Task<IEnumerable<BetDto>> GetAllBetsAsync(bool trackChanges)
 		{
-			var bets = _repository.Bet.GetAllBets(spinId, trackChanges);
+			var bets = await _repository.Bet.GetAllBetsAsync(trackChanges);
 
 			var betsDto = _mapper.Map<IEnumerable<BetDto>>(bets);
 
 			return betsDto;
 		}
 
-		public BetDto GetBet(Guid id,Guid spinId, bool trackChanges)
+		public async Task<BetDto> GetBetAsync(Guid id, bool trackChanges)
 		{
-			var spin = _repository.Spin.GetSpin(spinId,trackChanges);
-			if (spin is null)
-				throw new SpinNotFoundException(spinId);
-			
-			var bet = _repository.Bet.GetBet(id,spinId, trackChanges);
+			var bet = await _repository.Bet.GetBetAsync(id, trackChanges);
 			if (bet is null) 
 				throw new BetNotFoundException(id);
 
-			var companyDto = _mapper.Map<BetDto>(bet); 
-			return companyDto;
+			var BetDto = _mapper.Map<BetDto>(bet); 
+			return BetDto;
+		}
+
+        public async Task<BetDto> PlaceBetForNextSpinAsync( BetForCreationDto betForCreation, bool trackChanges)
+        {
+			var betEntity = _mapper.Map<Bet>(betForCreation);
+
+			_repository.Bet.PlaceBetForNextSpin(betEntity);
+			await _repository.SaveAsync();
+
+			var betToReturn = _mapper.Map<BetDto>(betEntity);
+
+			return betToReturn;
+		}
+
+		public async Task<IEnumerable<BetDto>> GetByIdsAsync(IEnumerable<Guid> ids, bool trackChanges)
+		{
+			if (ids is null)
+				throw new IdParametersBadRequestException();
+
+			var betEntities = await _repository.Bet.GetByIdsAsync(ids, trackChanges);
+			if (ids.Count() != betEntities.Count())
+				throw new CollectionByIdsBadRequestException();
+
+			var betsToReturn = _mapper.Map<IEnumerable<BetDto>>(betEntities);
+
+			return betsToReturn;
+		}
+
+		public async Task<(IEnumerable<BetDto> bets, string ids)> CreateBetCollectionAsync
+		(IEnumerable<BetForCreationDto> betCollection)
+		{
+			if (betCollection is null)
+				throw new BetCollectionBadRequest();
+
+			var betEntities = _mapper.Map<IEnumerable<Bet>>(betCollection);
+			foreach (var bet in betEntities)
+			{
+				_repository.Bet.PlaceBetForNextSpin(bet);
+			}
+
+			await _repository.SaveAsync();
+
+			var betCollectionToReturn = _mapper.Map<IEnumerable<BetDto>>(betEntities);
+			var ids = string.Join(",", betCollectionToReturn.Select(c => c.Id));
+
+			return (bets: betCollectionToReturn, ids: ids);
+		}
+
+		public async Task UpdateBetAsync(Guid betId,
+		BetForUpdateDto betForUpdate, bool trackChanges)
+		{
+			var bet = await _repository.Bet.GetBetAsync(betId, trackChanges);
+			if (bet is null)
+				throw new BetNotFoundException(betId);
+
+			_mapper.Map(betForUpdate, bet);
+			await _repository.SaveAsync();
 		}
 	}
 }

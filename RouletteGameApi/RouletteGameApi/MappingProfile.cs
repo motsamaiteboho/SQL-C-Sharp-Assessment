@@ -10,6 +10,8 @@ namespace RouletteGameApi
 		{
 			CreateMap<Bet, BetDto>();
 			CreateMap<Spin, SpinDto>();
+			CreateMap<Payout, PayoutDto>();
+			CreateMap<BetForCreationDto, Bet>();
 		}
 	}
 }

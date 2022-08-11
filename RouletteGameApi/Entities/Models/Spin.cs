@@ -13,6 +13,9 @@ namespace Entities.Models
         public Guid Id { get; set; }
         public long? SpinResult { get; set; }
         public DateTime TimestampUtc { get; set; }
-        public virtual ICollection<Bet>? Bets { get; set; }
+
+        [ForeignKey(nameof(Bet))]
+        public Guid? BetId { get; set; }
+        public ICollection<Bet>? Bets { get; set; }
     }
 }

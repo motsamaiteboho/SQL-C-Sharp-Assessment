@@ -32,21 +32,13 @@ namespace RouletteGameApi.Migrations
                     b.Property<decimal>("BetValue")
                         .HasColumnType("decimal(8, 2)");
 
-                    b.Property<decimal?>("BetWinnings")
-                        .HasColumnType("TEXT");
-
-                    b.Property<Guid?>("PayoutId")
-                        .HasColumnType("TEXT");
-
-                    b.Property<Guid>("SpinId")
+                    b.Property<Guid?>("SpinId")
                         .HasColumnType("TEXT");
 
                     b.Property<DateTime>("TimestampUtc")
                         .HasColumnType("TEXT");
 
                     b.HasKey("Id");
-
-                    b.HasIndex("PayoutId");
 
                     b.HasIndex("SpinId");
 
@@ -58,20 +50,14 @@ namespace RouletteGameApi.Migrations
                             Id = new Guid("c9d4c053-49b6-410c-bc78-2d54a9991870"),
                             BetOn = "HIGH",
                             BetValue = 50.62m,
-                            BetWinnings = 560.20m,
-                            PayoutId = new Guid("80abbca8-664d-4b20-b5de-024705497d4a"),
-                            SpinId = new Guid("c8d4c053-49b6-410c-bc78-2d54a9891870"),
-                            TimestampUtc = new DateTime(2022, 8, 8, 14, 35, 34, 390, DateTimeKind.Utc).AddTicks(1354)
+                            TimestampUtc = new DateTime(2022, 8, 10, 18, 8, 20, 324, DateTimeKind.Utc).AddTicks(552)
                         },
                         new
                         {
                             Id = new Guid("3d490a70-94ce-4d15-9494-5248280c2ce3"),
                             BetOn = "RED",
                             BetValue = 46.45m,
-                            BetWinnings = 384.78m,
-                            PayoutId = new Guid("86dba8c0-d178-41e7-938c-ed49778fb52a"),
-                            SpinId = new Guid("4d490a70-94ce-4d15-9494-5248280c2ce3"),
-                            TimestampUtc = new DateTime(2022, 8, 8, 14, 35, 34, 390, DateTimeKind.Utc).AddTicks(1358)
+                            TimestampUtc = new DateTime(2022, 8, 10, 18, 8, 20, 324, DateTimeKind.Utc).AddTicks(554)
                         });
                 });
 
@@ -82,10 +68,24 @@ namespace RouletteGameApi.Migrations
                         .HasColumnType("TEXT")
                         .HasColumnName("PayoutId");
 
+                    b.Property<Guid?>("BetId")
+                        .HasColumnType("TEXT");
+
+                    b.Property<Guid?>("SpinId")
+                        .HasColumnType("TEXT");
+
                     b.Property<DateTime>("TimestampUtc")
                         .HasColumnType("TEXT");
 
+                    b.Property<decimal>("TotalPayout")
+                        .HasColumnType("TEXT");
+
                     b.HasKey("Id");
+
+                    b.HasIndex("BetId")
+                        .IsUnique();
+
+                    b.HasIndex("SpinId");
 
                     b.ToTable("Payouts");
 
@@ -93,12 +93,18 @@ namespace RouletteGameApi.Migrations
                         new
                         {
                             Id = new Guid("80abbca8-664d-4b20-b5de-024705497d4a"),
-                            TimestampUtc = new DateTime(2022, 8, 8, 14, 35, 34, 390, DateTimeKind.Utc).AddTicks(1291)
+                            BetId = new Guid("c9d4c053-49b6-410c-bc78-2d54a9991870"),
+                            SpinId = new Guid("c8d4c053-49b6-410c-bc78-2d54a9891870"),
+                            TimestampUtc = new DateTime(2022, 8, 10, 18, 8, 20, 324, DateTimeKind.Utc).AddTicks(481),
+                            TotalPayout = 522.5m
                         },
                         new
                         {
                             Id = new Guid("86dba8c0-d178-41e7-938c-ed49778fb52a"),
-                            TimestampUtc = new DateTime(2022, 8, 8, 14, 35, 34, 390, DateTimeKind.Utc).AddTicks(1293)
+                            BetId = new Guid("3d490a70-94ce-4d15-9494-5248280c2ce3"),
+                            SpinId = new Guid("4d490a70-94ce-4d15-9494-5248280c2ce3"),
+                            TimestampUtc = new DateTime(2022, 8, 10, 18, 8, 20, 324, DateTimeKind.Utc).AddTicks(485),
+                            TotalPayout = 145.5m
                         });
                 });
 
@@ -108,6 +114,9 @@ namespace RouletteGameApi.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("TEXT")
                         .HasColumnName("SpinId");
+
+                    b.Property<Guid?>("BetId")
+                        .HasColumnType("TEXT");
 
                     b.Property<long?>("SpinResult")
                         .HasColumnType("INTEGER");
@@ -123,37 +132,46 @@ namespace RouletteGameApi.Migrations
                         new
                         {
                             Id = new Guid("c8d4c053-49b6-410c-bc78-2d54a9891870"),
+                            BetId = new Guid("c9d4c053-49b6-410c-bc78-2d54a9991870"),
                             SpinResult = 5L,
-                            TimestampUtc = new DateTime(2022, 8, 8, 14, 35, 34, 390, DateTimeKind.Utc).AddTicks(1137)
+                            TimestampUtc = new DateTime(2022, 8, 10, 18, 8, 20, 324, DateTimeKind.Utc).AddTicks(262)
                         },
                         new
                         {
                             Id = new Guid("4d490a70-94ce-4d15-9494-5248280c2ce3"),
-                            SpinResult = 5L,
-                            TimestampUtc = new DateTime(2022, 8, 8, 14, 35, 34, 390, DateTimeKind.Utc).AddTicks(1140)
+                            BetId = new Guid("c9d4c053-49b6-410c-bc78-2d54a9991870"),
+                            SpinResult = 7L,
+                            TimestampUtc = new DateTime(2022, 8, 10, 18, 8, 20, 324, DateTimeKind.Utc).AddTicks(268)
                         });
                 });
 
             modelBuilder.Entity("Entities.Models.Bet", b =>
                 {
-                    b.HasOne("Entities.Models.Payout", "Payout")
-                        .WithMany("Bets")
-                        .HasForeignKey("PayoutId");
-
                     b.HasOne("Entities.Models.Spin", "Spin")
                         .WithMany("Bets")
-                        .HasForeignKey("SpinId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Payout");
+                        .HasForeignKey("SpinId");
 
                     b.Navigation("Spin");
                 });
 
             modelBuilder.Entity("Entities.Models.Payout", b =>
                 {
-                    b.Navigation("Bets");
+                    b.HasOne("Entities.Models.Bet", "Bet")
+                        .WithOne("Payout")
+                        .HasForeignKey("Entities.Models.Payout", "BetId");
+
+                    b.HasOne("Entities.Models.Spin", "Spin")
+                        .WithMany()
+                        .HasForeignKey("SpinId");
+
+                    b.Navigation("Bet");
+
+                    b.Navigation("Spin");
+                });
+
+            modelBuilder.Entity("Entities.Models.Bet", b =>
+                {
+                    b.Navigation("Payout");
                 });
 
             modelBuilder.Entity("Entities.Models.Spin", b =>

@@ -11,6 +11,6 @@ namespace Contracts
         ISpinRepository Spin { get; }
         IPayoutRepository Payout { get; } 
         IBetRepository Bet { get; }
-        void Save();
+        Task SaveAsync();
     }
 }

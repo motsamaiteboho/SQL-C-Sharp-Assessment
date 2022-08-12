@@ -33,6 +33,7 @@ namespace RouletteGameApi.Presentation.Controllers
 		}
 
 		[HttpGet("{id:guid}", Name ="SpinById")]
+		[ResponseCache(Duration = 60)]
 		public async Task<IActionResult> GetSpin(Guid id)
 		{
 			var spins = await _service.SpinService.GetSpinAsync(id, trackChanges: false);

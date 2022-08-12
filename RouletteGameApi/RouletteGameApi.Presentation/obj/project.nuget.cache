@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "/TOsKXohFIVk6CcnMXc3s4boKVJy5cgdYr7tRG2rwKplweNnErCE3kpNEt/l86sX9jVqjZ+sRIqrtR0Q3LHXrA==",
+  "dgSpecHash": "oqx5QizU/PC5wYrVfRKzBSb4Tlj8+Z09aQrs7aw5oqDe5MjhhaJLR9SMTo9ymdDUQpYAHeMqYi5KcKVttL3+xQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\Motsa\\Desktop\\Dervico\\SQL $ SHARP Assessment\\RouletteGameApi\\RouletteGameApi.Presentation\\RouletteGameApi.Presentation.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Motsa\\.nuget\\packages\\marvin.cache.headers\\6.1.0\\marvin.cache.headers.6.1.0.nupkg.sha512",
     "C:\\Users\\Motsa\\.nuget\\packages\\microsoft.aspnetcore.authentication.abstractions\\2.2.0\\microsoft.aspnetcore.authentication.abstractions.2.2.0.nupkg.sha512",
     "C:\\Users\\Motsa\\.nuget\\packages\\microsoft.aspnetcore.authentication.core\\2.2.0\\microsoft.aspnetcore.authentication.core.2.2.0.nupkg.sha512",
     "C:\\Users\\Motsa\\.nuget\\packages\\microsoft.aspnetcore.authorization\\2.2.0\\microsoft.aspnetcore.authorization.2.2.0.nupkg.sha512",

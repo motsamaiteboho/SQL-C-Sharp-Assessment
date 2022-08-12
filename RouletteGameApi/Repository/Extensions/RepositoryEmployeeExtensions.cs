@@ -1,4 +1,5 @@
 ﻿using Entities.Models;
+using Repository.Extensions.Utility;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -32,7 +33,7 @@ namespace Repository.Extensions
 			if (string.IsNullOrWhiteSpace(orderQuery))
 				return bets.OrderBy(e => e.BetOn);
 
-			return bets.OrderBy(orderQuery);
+			return bets.OrderBy( e => orderQuery);
 		}
 	}
 }

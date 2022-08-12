@@ -5340,3 +5340,190 @@
 2022-08-11 16:04:55.5542 Trace Closing Layout Renderer: ${message}
 2022-08-11 16:04:55.5542 Debug Finished closing logging configuration.
 2022-08-11 16:04:55.5542 Info LogFactory has been closed.
+2022-08-12 14:12:40.8048 Info Message Template Auto Format enabled
+2022-08-12 14:12:42.3566 Debug ScanAssembly('NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c')
+2022-08-12 14:12:47.3176 Debug Setting 'NLog.Targets.FileTarget.name' to 'logfile'
+2022-08-12 14:12:47.3994 Debug Setting 'NLog.Targets.FileTarget.fileName' to 'C:\Users\Motsa\Desktop\Dervico\SQL $ SHARP Assessment\RouletteGameApi\Logs\logs\${shortdate}_logfile.txt'
+2022-08-12 14:12:47.4241 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2022-08-12 14:12:47.4241 Trace Scanning ShortDateLayoutRenderer 'Layout Renderer: ${shortdate}'
+2022-08-12 14:12:47.4375 Debug Setting 'NLog.Targets.FileTarget.layout' to '${longdate} ${level:uppercase=true} ${message}'
+2022-08-12 14:12:47.4605 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2022-08-12 14:12:47.4605 Trace Scanning LongDateLayoutRenderer 'Layout Renderer: ${longdate}'
+2022-08-12 14:12:47.5025 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2022-08-12 14:12:47.5025 Trace Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2022-08-12 14:12:47.5025 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2022-08-12 14:12:47.5025 Trace Scanning MessageLayoutRenderer 'Layout Renderer: ${message}'
+2022-08-12 14:12:47.5025 Info Adding target FileTarget(Name=logfile)
+2022-08-12 14:12:47.5025 Debug Registered target logfile: NLog.Targets.FileTarget
+2022-08-12 14:12:47.5429 Trace ParseRulesElement
+2022-08-12 14:12:48.2099 Debug Watching file-filter 'nlog.config' in directory: C:\Users\Motsa\Desktop\Dervico\SQL $ SHARP Assessment\RouletteGameApi\RouletteGameApi
+2022-08-12 14:12:48.2169 Debug --- NLog configuration dump ---
+2022-08-12 14:12:48.2169 Debug Targets:
+2022-08-12 14:12:48.4132 Debug FileTarget(Name=logfile)
+2022-08-12 14:12:48.4132 Debug Rules:
+2022-08-12 14:12:48.4738 Debug logNamePattern: (:All) levels: [ Debug Info Warn Error Fatal ] writeTo: [ logfile ]
+2022-08-12 14:12:48.4738 Debug --- End of NLog configuration dump ---
+2022-08-12 14:12:48.4926 Trace FindReachableObject<System.Object>:
+2022-08-12 14:12:48.4926 Trace Scanning LoggingRule 'logNamePattern: (:All) levels: [ Debug Info Warn Error Fatal ] writeTo: [ logfile ]'
+2022-08-12 14:12:48.5017 Trace  Scanning Property Targets 'System.Collections.Generic.List`1[NLog.Targets.Target]' System.Collections.Generic
+2022-08-12 14:12:48.5324 Trace  Scanning FileTarget 'FileTarget(Name=logfile)'
+2022-08-12 14:12:48.5549 Trace   Scanning Property FileName 'C:\Users\Motsa\Desktop\Dervico\SQL $ SHARP Assessment\RouletteGameApi\Logs\logs\${shortdate}_logfile.txt' NLog.Layouts
+2022-08-12 14:12:48.5549 Trace   Scanning SimpleLayout 'C:\Users\Motsa\Desktop\Dervico\SQL $ SHARP Assessment\RouletteGameApi\Logs\logs\${shortdate}_logfile.txt'
+2022-08-12 14:12:48.5549 Trace    Scanning Property LayoutRenderers 'NLog.LayoutRenderers.LayoutRenderer[]' System.Collections.Generic
+2022-08-12 14:12:48.5618 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2022-08-12 14:12:48.5618 Trace    Scanning ShortDateLayoutRenderer 'Layout Renderer: ${shortdate}'
+2022-08-12 14:12:48.5618 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2022-08-12 14:12:48.5618 Trace   Scanning Property LineEnding 'Default' NLog.Targets
+2022-08-12 14:12:48.5618 Trace   Scanning Property Layout '${longdate} ${level:uppercase=true} ${message}' NLog.Layouts
+2022-08-12 14:12:48.5618 Trace   Scanning SimpleLayout '${longdate} ${level:uppercase=true} ${message}'
+2022-08-12 14:12:48.5618 Trace    Scanning Property LayoutRenderers 'NLog.LayoutRenderers.LayoutRenderer[]' System.Collections.Generic
+2022-08-12 14:12:48.5618 Trace    Scanning LongDateLayoutRenderer 'Layout Renderer: ${longdate}'
+2022-08-12 14:12:48.5618 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2022-08-12 14:12:48.5618 Trace    Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2022-08-12 14:12:48.5618 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2022-08-12 14:12:48.5618 Trace    Scanning MessageLayoutRenderer 'Layout Renderer: ${message}'
+2022-08-12 14:12:48.5775 Trace  Scanning Property ChildRules 'System.Collections.Generic.List`1[NLog.Config.LoggingRule]' System.Collections.Generic
+2022-08-12 14:12:48.5775 Trace  Scanning Property Filters 'System.Collections.Generic.List`1[NLog.Filters.Filter]' System.Collections.Generic
+2022-08-12 14:12:48.6106 Info Validating config: TargetNames=logfile, ConfigItems=12, FilePath=C:\Users\Motsa\Desktop\Dervico\SQL $ SHARP Assessment\RouletteGameApi\RouletteGameApi\nlog.config
+2022-08-12 14:12:48.6106 Debug Unused target checking is started... Rule Count: 1, Target Count: 1
+2022-08-12 14:12:48.6905 Debug Unused target checking is completed. Total Rule Count: 1, Total Target Count: 1, Unused Target Count: 0
+2022-08-12 14:12:48.6905 Trace Initializing Layout Renderer: ${message}
+2022-08-12 14:12:48.6905 Trace Initializing Layout Renderer: ${literal}
+2022-08-12 14:12:48.6905 Trace Initializing Layout Renderer: ${level}
+2022-08-12 14:12:48.6905 Trace Initializing Layout Renderer: ${literal}
+2022-08-12 14:12:48.6905 Trace Initializing Layout Renderer: ${longdate}
+2022-08-12 14:12:48.6905 Trace Initializing ${longdate} ${level:uppercase=true} ${message}
+2022-08-12 14:12:48.6905 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2022-08-12 14:12:48.6905 Trace Scanning SimpleLayout '${longdate} ${level:uppercase=true} ${message}'
+2022-08-12 14:12:48.6905 Trace  Scanning Property LayoutRenderers 'NLog.LayoutRenderers.LayoutRenderer[]' System.Collections.Generic
+2022-08-12 14:12:48.6905 Trace  Scanning LongDateLayoutRenderer 'Layout Renderer: ${longdate}'
+2022-08-12 14:12:48.6905 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2022-08-12 14:12:48.7013 Trace  Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2022-08-12 14:12:48.7013 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2022-08-12 14:12:48.7271 Trace  Scanning MessageLayoutRenderer 'Layout Renderer: ${message}'
+2022-08-12 14:12:48.7271 Trace Initializing Layout Renderer: ${literal}
+2022-08-12 14:12:48.7318 Trace Initializing Layout Renderer: ${shortdate}
+2022-08-12 14:12:48.7318 Trace Initializing Layout Renderer: ${literal}
+2022-08-12 14:12:48.7318 Trace Initializing C:\Users\Motsa\Desktop\Dervico\SQL $ SHARP Assessment\RouletteGameApi\Logs\logs\${shortdate}_logfile.txt
+2022-08-12 14:12:48.7318 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2022-08-12 14:12:48.7318 Trace Scanning SimpleLayout 'C:\Users\Motsa\Desktop\Dervico\SQL $ SHARP Assessment\RouletteGameApi\Logs\logs\${shortdate}_logfile.txt'
+2022-08-12 14:12:48.7318 Trace  Scanning Property LayoutRenderers 'NLog.LayoutRenderers.LayoutRenderer[]' System.Collections.Generic
+2022-08-12 14:12:48.7318 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2022-08-12 14:12:48.7318 Trace  Scanning ShortDateLayoutRenderer 'Layout Renderer: ${shortdate}'
+2022-08-12 14:12:48.7482 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2022-08-12 14:12:48.7482 Trace Initializing FileTarget(Name=logfile)
+2022-08-12 14:12:48.7482 Trace FindReachableObject<NLog.Layouts.Layout>:
+2022-08-12 14:12:48.7482 Trace Scanning FileTarget 'FileTarget(Name=logfile)'
+2022-08-12 14:12:48.7482 Trace  Scanning Property FileName 'C:\Users\Motsa\Desktop\Dervico\SQL $ SHARP Assessment\RouletteGameApi\Logs\logs\${shortdate}_logfile.txt' NLog.Layouts
+2022-08-12 14:12:48.7482 Trace  Scanning SimpleLayout 'C:\Users\Motsa\Desktop\Dervico\SQL $ SHARP Assessment\RouletteGameApi\Logs\logs\${shortdate}_logfile.txt'
+2022-08-12 14:12:48.7482 Trace  Scanning Property LineEnding 'Default' NLog.Targets
+2022-08-12 14:12:48.7482 Trace  Scanning Property Layout '${longdate} ${level:uppercase=true} ${message}' NLog.Layouts
+2022-08-12 14:12:48.7482 Trace  Scanning SimpleLayout '${longdate} ${level:uppercase=true} ${message}'
+2022-08-12 14:12:48.7482 Trace FileTarget(Name=logfile) has 2 layouts
+2022-08-12 14:12:48.7482 Trace FileTarget(Name=logfile): Using appenderFactory: NLog.Internal.FileAppenders.SingleProcessFileAppender+Factory
+2022-08-12 14:17:19.7930 Info AppDomain Shutting down. LogFactory closing...
+2022-08-12 14:17:19.9045 Debug Stopping file watching for path 'C:\Users\Motsa\Desktop\Dervico\SQL $ SHARP Assessment\RouletteGameApi\RouletteGameApi' filter 'nlog.config'
+2022-08-12 14:17:19.9444 Trace Flushing all 1 targets...
+2022-08-12 14:17:19.9679 Trace ForEachItemInParallel() 1 items
+2022-08-12 14:17:19.9679 Trace FileTarget(Name=logfile): FlushAsync
+2022-08-12 14:17:19.9878 Trace Continuation invoked: 
+2022-08-12 14:17:19.9878 Trace Parallel task completed. 0 items remaining
+2022-08-12 14:17:19.9878 Debug Flush completed
+2022-08-12 14:17:19.9878 Trace FileTarget(Name=logfile): FlushAsync Done
+2022-08-12 14:17:19.9975 Debug Closing logging configuration...
+2022-08-12 14:17:19.9975 Trace Closing FileTarget(Name=logfile)
+2022-08-12 14:17:19.9975 Debug FileTarget(Name=logfile): Closing...
+2022-08-12 14:17:19.9975 Debug FileTarget(Name=logfile): Closed.
+2022-08-12 14:17:19.9975 Trace Closing C:\Users\Motsa\Desktop\Dervico\SQL $ SHARP Assessment\RouletteGameApi\Logs\logs\${shortdate}_logfile.txt
+2022-08-12 14:17:19.9975 Trace Closing Layout Renderer: ${literal}
+2022-08-12 14:17:19.9975 Trace Closing Layout Renderer: ${shortdate}
+2022-08-12 14:17:19.9975 Trace Closing Layout Renderer: ${literal}
+2022-08-12 14:17:19.9975 Trace Closing ${longdate} ${level:uppercase=true} ${message}
+2022-08-12 14:17:19.9975 Trace Closing Layout Renderer: ${longdate}
+2022-08-12 14:17:19.9975 Trace Closing Layout Renderer: ${literal}
+2022-08-12 14:17:19.9975 Trace Closing Layout Renderer: ${level}
+2022-08-12 14:17:19.9975 Trace Closing Layout Renderer: ${literal}
+2022-08-12 14:17:19.9975 Trace Closing Layout Renderer: ${message}
+2022-08-12 14:17:19.9975 Debug Finished closing logging configuration.
+2022-08-12 14:17:19.9975 Info LogFactory has been closed.
+2022-08-12 15:09:56.7868 Info Message Template Auto Format enabled
+2022-08-12 15:09:57.3581 Debug ScanAssembly('NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c')
+2022-08-12 15:09:58.4444 Debug Setting 'NLog.Targets.FileTarget.name' to 'logfile'
+2022-08-12 15:09:58.4568 Debug Setting 'NLog.Targets.FileTarget.fileName' to 'C:\Users\Motsa\Desktop\Dervico\SQL $ SHARP Assessment\RouletteGameApi\Logs\logs\${shortdate}_logfile.txt'
+2022-08-12 15:09:58.4727 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2022-08-12 15:09:58.4727 Trace Scanning ShortDateLayoutRenderer 'Layout Renderer: ${shortdate}'
+2022-08-12 15:09:58.4727 Debug Setting 'NLog.Targets.FileTarget.layout' to '${longdate} ${level:uppercase=true} ${message}'
+2022-08-12 15:09:58.4833 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2022-08-12 15:09:58.4833 Trace Scanning LongDateLayoutRenderer 'Layout Renderer: ${longdate}'
+2022-08-12 15:09:58.4833 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2022-08-12 15:09:58.4833 Trace Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2022-08-12 15:09:58.4833 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2022-08-12 15:09:58.4833 Trace Scanning MessageLayoutRenderer 'Layout Renderer: ${message}'
+2022-08-12 15:09:58.4833 Info Adding target FileTarget(Name=logfile)
+2022-08-12 15:09:58.4999 Debug Registered target logfile: NLog.Targets.FileTarget
+2022-08-12 15:09:58.4999 Trace ParseRulesElement
+2022-08-12 15:09:58.6869 Debug Watching file-filter 'nlog.config' in directory: C:\Users\Motsa\Desktop\Dervico\SQL $ SHARP Assessment\RouletteGameApi\RouletteGameApi
+2022-08-12 15:09:58.6869 Debug --- NLog configuration dump ---
+2022-08-12 15:09:58.6869 Debug Targets:
+2022-08-12 15:09:59.0431 Debug FileTarget(Name=logfile)
+2022-08-12 15:09:59.0431 Debug Rules:
+2022-08-12 15:09:59.0455 Debug logNamePattern: (:All) levels: [ Debug Info Warn Error Fatal ] writeTo: [ logfile ]
+2022-08-12 15:09:59.0455 Debug --- End of NLog configuration dump ---
+2022-08-12 15:09:59.0455 Trace FindReachableObject<System.Object>:
+2022-08-12 15:09:59.0455 Trace Scanning LoggingRule 'logNamePattern: (:All) levels: [ Debug Info Warn Error Fatal ] writeTo: [ logfile ]'
+2022-08-12 15:09:59.0455 Trace  Scanning Property Targets 'System.Collections.Generic.List`1[NLog.Targets.Target]' System.Collections.Generic
+2022-08-12 15:09:59.1793 Trace  Scanning FileTarget 'FileTarget(Name=logfile)'
+2022-08-12 15:09:59.1858 Trace   Scanning Property FileName 'C:\Users\Motsa\Desktop\Dervico\SQL $ SHARP Assessment\RouletteGameApi\Logs\logs\${shortdate}_logfile.txt' NLog.Layouts
+2022-08-12 15:09:59.1858 Trace   Scanning SimpleLayout 'C:\Users\Motsa\Desktop\Dervico\SQL $ SHARP Assessment\RouletteGameApi\Logs\logs\${shortdate}_logfile.txt'
+2022-08-12 15:09:59.1858 Trace    Scanning Property LayoutRenderers 'NLog.LayoutRenderers.LayoutRenderer[]' System.Collections.Generic
+2022-08-12 15:09:59.1858 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2022-08-12 15:09:59.1858 Trace    Scanning ShortDateLayoutRenderer 'Layout Renderer: ${shortdate}'
+2022-08-12 15:09:59.1858 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2022-08-12 15:09:59.1858 Trace   Scanning Property Layout '${longdate} ${level:uppercase=true} ${message}' NLog.Layouts
+2022-08-12 15:09:59.1858 Trace   Scanning SimpleLayout '${longdate} ${level:uppercase=true} ${message}'
+2022-08-12 15:09:59.1858 Trace    Scanning Property LayoutRenderers 'NLog.LayoutRenderers.LayoutRenderer[]' System.Collections.Generic
+2022-08-12 15:09:59.1858 Trace    Scanning LongDateLayoutRenderer 'Layout Renderer: ${longdate}'
+2022-08-12 15:09:59.1858 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2022-08-12 15:09:59.1858 Trace    Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2022-08-12 15:09:59.1858 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2022-08-12 15:09:59.1858 Trace    Scanning MessageLayoutRenderer 'Layout Renderer: ${message}'
+2022-08-12 15:09:59.1858 Trace   Scanning Property LineEnding 'Default' NLog.Targets
+2022-08-12 15:09:59.1858 Trace  Scanning Property ChildRules 'System.Collections.Generic.List`1[NLog.Config.LoggingRule]' System.Collections.Generic
+2022-08-12 15:09:59.1858 Trace  Scanning Property Filters 'System.Collections.Generic.List`1[NLog.Filters.Filter]' System.Collections.Generic
+2022-08-12 15:09:59.2741 Info Validating config: TargetNames=logfile, ConfigItems=12, FilePath=C:\Users\Motsa\Desktop\Dervico\SQL $ SHARP Assessment\RouletteGameApi\RouletteGameApi\nlog.config
+2022-08-12 15:09:59.2741 Debug Unused target checking is started... Rule Count: 1, Target Count: 1
+2022-08-12 15:09:59.3693 Debug Unused target checking is completed. Total Rule Count: 1, Total Target Count: 1, Unused Target Count: 0
+2022-08-12 15:09:59.3693 Trace Initializing Layout Renderer: ${message}
+2022-08-12 15:09:59.3693 Trace Initializing Layout Renderer: ${literal}
+2022-08-12 15:09:59.3844 Trace Initializing Layout Renderer: ${level}
+2022-08-12 15:09:59.4031 Trace Initializing Layout Renderer: ${literal}
+2022-08-12 15:09:59.4031 Trace Initializing Layout Renderer: ${longdate}
+2022-08-12 15:09:59.4042 Trace Initializing ${longdate} ${level:uppercase=true} ${message}
+2022-08-12 15:09:59.4042 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2022-08-12 15:09:59.4042 Trace Scanning SimpleLayout '${longdate} ${level:uppercase=true} ${message}'
+2022-08-12 15:09:59.4042 Trace  Scanning Property LayoutRenderers 'NLog.LayoutRenderers.LayoutRenderer[]' System.Collections.Generic
+2022-08-12 15:09:59.4042 Trace  Scanning LongDateLayoutRenderer 'Layout Renderer: ${longdate}'
+2022-08-12 15:09:59.4042 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2022-08-12 15:09:59.4042 Trace  Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2022-08-12 15:09:59.4042 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2022-08-12 15:09:59.4212 Trace  Scanning MessageLayoutRenderer 'Layout Renderer: ${message}'
+2022-08-12 15:09:59.4212 Trace Initializing Layout Renderer: ${literal}
+2022-08-12 15:09:59.4212 Trace Initializing Layout Renderer: ${shortdate}
+2022-08-12 15:09:59.4212 Trace Initializing Layout Renderer: ${literal}
+2022-08-12 15:09:59.4212 Trace Initializing C:\Users\Motsa\Desktop\Dervico\SQL $ SHARP Assessment\RouletteGameApi\Logs\logs\${shortdate}_logfile.txt
+2022-08-12 15:09:59.4212 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2022-08-12 15:09:59.4212 Trace Scanning SimpleLayout 'C:\Users\Motsa\Desktop\Dervico\SQL $ SHARP Assessment\RouletteGameApi\Logs\logs\${shortdate}_logfile.txt'
+2022-08-12 15:09:59.4212 Trace  Scanning Property LayoutRenderers 'NLog.LayoutRenderers.LayoutRenderer[]' System.Collections.Generic
+2022-08-12 15:09:59.4212 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2022-08-12 15:09:59.4212 Trace  Scanning ShortDateLayoutRenderer 'Layout Renderer: ${shortdate}'
+2022-08-12 15:09:59.4212 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2022-08-12 15:09:59.4212 Trace Initializing FileTarget(Name=logfile)
+2022-08-12 15:09:59.4499 Trace FindReachableObject<NLog.Layouts.Layout>:
+2022-08-12 15:09:59.4499 Trace Scanning FileTarget 'FileTarget(Name=logfile)'
+2022-08-12 15:09:59.4499 Trace  Scanning Property FileName 'C:\Users\Motsa\Desktop\Dervico\SQL $ SHARP Assessment\RouletteGameApi\Logs\logs\${shortdate}_logfile.txt' NLog.Layouts
+2022-08-12 15:09:59.4499 Trace  Scanning SimpleLayout 'C:\Users\Motsa\Desktop\Dervico\SQL $ SHARP Assessment\RouletteGameApi\Logs\logs\${shortdate}_logfile.txt'
+2022-08-12 15:09:59.4516 Trace  Scanning Property Layout '${longdate} ${level:uppercase=true} ${message}' NLog.Layouts
+2022-08-12 15:09:59.4516 Trace  Scanning SimpleLayout '${longdate} ${level:uppercase=true} ${message}'
+2022-08-12 15:09:59.4516 Trace  Scanning Property LineEnding 'Default' NLog.Targets
+2022-08-12 15:09:59.4516 Trace FileTarget(Name=logfile) has 2 layouts
+2022-08-12 15:09:59.4516 Trace FileTarget(Name=logfile): Using appenderFactory: NLog.Internal.FileAppenders.SingleProcessFileAppender+Factory

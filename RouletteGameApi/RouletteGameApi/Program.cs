@@ -34,6 +34,10 @@ namespace RouletteGameApi
             });
 
             builder.Services.AddScoped<ValidationFilterAttribute>();
+            builder.Services.ConfigureResponseCaching();
+            builder.Services.ConfigureHttpCacheHeaders();
+
+            builder.Services.ConfigureSwagger();
 
             builder.Services.AddControllers(config => { 
                 config.RespectBrowserAcceptHeader = true;
@@ -64,11 +68,14 @@ namespace RouletteGameApi
             });
 
             app.UseCors("CorsPolicy");
+            app.UseResponseCaching();
+            app.UseHttpCacheHeaders();
 
             app.UseAuthorization();
 
             app.MapControllers();
-
+            app.UseSwagger();
+            app.UseSwaggerUI();
             app.Run();
 
             NewtonsoftJsonPatchInputFormatter GetJsonPatchInputFormatter() =>

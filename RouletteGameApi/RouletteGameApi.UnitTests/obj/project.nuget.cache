@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "Jc8Y5Us42EuTZjLn1PdA83Tnh2qc3uZcS+EEzTWeE0JVNenS/Nv6boKVMnIBRfnEObdj+IVRi2E1iwoTCpprtQ==",
+  "dgSpecHash": "/LnE1m8tPS/SeZ3mLIBv13M61cMTEGuzKviIj6rObA5xpxSLDlJloPfZ8WSPJDf6R9QII43uYNjHJTYtBusWkw==",
   "success": true,
   "projectFilePath": "C:\\Users\\Motsa\\Desktop\\Dervico\\SQL $ SHARP Assessment\\RouletteGameApi\\RouletteGameApi.UnitTests\\RouletteGameApi.UnitTests.csproj",
   "expectedPackageFiles": [
@@ -11,6 +11,7 @@
     "C:\\Users\\Motsa\\.nuget\\packages\\dapper\\2.0.123\\dapper.2.0.123.nupkg.sha512",
     "C:\\Users\\Motsa\\.nuget\\packages\\fakeiteasy\\7.3.1\\fakeiteasy.7.3.1.nupkg.sha512",
     "C:\\Users\\Motsa\\.nuget\\packages\\fluentassertions\\6.7.0\\fluentassertions.6.7.0.nupkg.sha512",
+    "C:\\Users\\Motsa\\.nuget\\packages\\marvin.cache.headers\\6.1.0\\marvin.cache.headers.6.1.0.nupkg.sha512",
     "C:\\Users\\Motsa\\.nuget\\packages\\microsoft.aspnetcore.authentication.abstractions\\2.2.0\\microsoft.aspnetcore.authentication.abstractions.2.2.0.nupkg.sha512",
     "C:\\Users\\Motsa\\.nuget\\packages\\microsoft.aspnetcore.authentication.core\\2.2.0\\microsoft.aspnetcore.authentication.core.2.2.0.nupkg.sha512",
     "C:\\Users\\Motsa\\.nuget\\packages\\microsoft.aspnetcore.authorization\\2.2.0\\microsoft.aspnetcore.authorization.2.2.0.nupkg.sha512",

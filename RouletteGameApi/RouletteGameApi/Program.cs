@@ -8,6 +8,8 @@ using Microsoft.AspNetCore.Mvc.Formatters;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Options;
 using RouletteGameApi.Presentation.ActionFilters;
+using Microsoft.Extensions.Hosting;
+using Microsoft.AspNetCore.Hosting;
 
 namespace RouletteGameApi
 {
@@ -83,6 +85,7 @@ namespace RouletteGameApi
                 .Services.BuildServiceProvider()
                     .GetRequiredService<IOptions<MvcOptions>>().Value.InputFormatters
                          .OfType<NewtonsoftJsonPatchInputFormatter>().First();
+            
         }
     }
 }

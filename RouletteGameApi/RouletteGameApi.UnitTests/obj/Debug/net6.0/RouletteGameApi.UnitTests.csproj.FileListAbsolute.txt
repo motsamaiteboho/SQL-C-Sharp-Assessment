@@ -166,3 +166,7 @@ C:\Users\Motsa\Desktop\Dervico\SQL $ SHARP Assessment\RouletteGameApi\RouletteGa
 C:\Users\Motsa\Desktop\Dervico\SQL $ SHARP Assessment\RouletteGameApi\RouletteGameApi.UnitTests\bin\Debug\net6.0\Service.pdb
 C:\Users\Motsa\Desktop\Dervico\SQL $ SHARP Assessment\RouletteGameApi\RouletteGameApi.UnitTests\bin\Debug\net6.0\Service.Contracts.pdb
 C:\Users\Motsa\Desktop\Dervico\SQL $ SHARP Assessment\RouletteGameApi\RouletteGameApi.UnitTests\bin\Debug\net6.0\Shared.pdb
+C:\Users\Motsa\Desktop\Dervico\SQL $ SHARP Assessment\RouletteGameApi\RouletteGameApi.UnitTests\bin\Debug\net6.0\Marvin.Cache.Headers.dll
+C:\Users\Motsa\Desktop\Dervico\SQL $ SHARP Assessment\RouletteGameApi\RouletteGameApi.UnitTests\bin\Debug\net6.0\Microsoft.AspNetCore.JsonPatch.dll
+C:\Users\Motsa\Desktop\Dervico\SQL $ SHARP Assessment\RouletteGameApi\RouletteGameApi.UnitTests\bin\Debug\net6.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
+C:\Users\Motsa\Desktop\Dervico\SQL $ SHARP Assessment\RouletteGameApi\RouletteGameApi.UnitTests\bin\Debug\net6.0\Newtonsoft.Json.Bson.dll

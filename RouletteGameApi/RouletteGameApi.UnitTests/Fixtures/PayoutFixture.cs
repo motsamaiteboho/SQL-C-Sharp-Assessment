@@ -1,4 +1,5 @@
 ﻿using Entities.Models;
+using Shared.DataTransferObjects;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,27 +10,27 @@ namespace RouletteGameApi.UnitTests.Fixtures
 {
     public static class PayoutFixture
     {
-        public static List<Payout> GetAllPayouts()
+        public static List<PayoutDto> GetAllPayouts()
         {
-            return new List<Payout>
+            return new List<PayoutDto>
             {
-                  new Payout
+                  new PayoutDto
                 {
                     Id = new Guid("80abbca8-664d-4b20-b5de-024705497d4a"),
                     TotalPayout = 522.5m,
-                    TimestampUtc = DateTime.UtcNow,
-                    BetId = new Guid("c9d4c053-49b6-410c-bc78-2d54a9991870"),
-                    SpinId = new Guid("c8d4c053-49b6-410c-bc78-2d54a9891870"),
+                    TimestampUtc = DateTime.UtcNow
                 },
-                new Payout
+                new PayoutDto
                 {
                     Id = new Guid("86dba8c0-d178-41e7-938c-ed49778fb52a"),
                     TotalPayout = 145.5m,
-                    TimestampUtc = DateTime.UtcNow,
-                    BetId = new Guid("3d490a70-94ce-4d15-9494-5248280c2ce3"),
-                    SpinId = new Guid("4d490a70-94ce-4d15-9494-5248280c2ce3"),
+                    TimestampUtc = DateTime.UtcNow
                 }
             };
+        }
+        public static PayoutDto GetPayout(Guid id)
+        {
+            return GetAllPayouts().Find(x => x.Id == id);
         }
     }
 }

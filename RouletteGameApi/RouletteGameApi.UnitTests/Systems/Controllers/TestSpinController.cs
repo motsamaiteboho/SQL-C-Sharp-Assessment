@@ -39,7 +39,9 @@ namespace RouletteGameApi.UnitTests.Systems.Controllers
         {
             //Arrange
             var spinService = new Mock<IServiceManager>();
-            spinService.Setup(_ => _.SpinService.GetSpinAsync(new Guid("c8d4c053-49b6-410c-bc78-2d54a9891870"),false))
+            spinService.Setup(_ => _.SpinService.GetSpinAsync(
+                new Guid("c8d4c053-49b6-410c-bc78-2d54a9891870")
+                ,false))
                 .ReturnsAsync(SpinsFixture.GetSpin(new Guid("c8d4c053-49b6-410c-bc78-2d54a9891870")));
 
             var sut = new SpinsController(spinService.Object);

@@ -1,4 +1,5 @@
-﻿using Shared.DataTransferObjects;
+﻿using Entities.Models;
+using Shared.DataTransferObjects;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -33,13 +34,13 @@ namespace RouletteGameApi.UnitTests.Fixtures
         {
             return GetAllBets().Find(x => x.Id == id);
         }
-        public static BetDto GetNextSpin()
+        public static Bet NewTodo()
         {
-            return new BetDto
+            return new Bet
             {
-                Id = new Guid("c9d4c053-49b6-410c-bc78-2d54a9991870"),
-                BetOn = "HIGH",
-                BetValue = 50.62m,
+                Id = new Guid("c8d4c053-49b6-410c-bc78-2d54a9891870"),
+                BetOn = "EVEN",
+                BetValue = 150.62m,
                 TimestampUtc = DateTime.UtcNow
             };
         }
